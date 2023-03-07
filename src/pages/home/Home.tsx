@@ -1,20 +1,20 @@
-import { HomeContainer } from './HomeStyle'
+import { HomeStyle } from './HomeStyle'
 import { Link } from 'react-router-dom'
 
 
 
-const Landing = () =>  {
+const Home = () =>  {
 
     return (
     <>
-    <HomeContainer>
+    <HomeStyle>
 
         <h1>Home </h1>
-    </HomeContainer>
+    </HomeStyle>
         
     </>
     )
     
 }
-export default Landing
+export default Home
 
