@@ -1,4 +1,4 @@
 import styled from "styled-components";
 
-export const LandingStyle = styled.section`
+export const HomeContainer = styled.section`
 `  
