@@ -35,17 +35,21 @@ span>div{
 
 @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
-
+   
 span{
-    width: 50%;
+    width: 200px;
     justify-content:flex-start;
     margin-top: 10px;
     margin-bottom:20px;
 }
 span>div{
 justify-content:flex-start ;
+
 svg{
-    margin-left:15px
+    margin-left:15px;
+    padding-right:5px;    
+    height: 30px;
+    width:30px;
 }
 }
 a{
