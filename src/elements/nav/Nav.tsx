@@ -2,7 +2,9 @@ import { Menu, Navigation, NavStyle, TopNav } from './NavStyle'
 import { Link } from 'react-router-dom'
 import { BsLinkedin } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
+import { RxHamburgerMenu } from 'react-icons/rx';
 import logoEnlace from '../../assets/logoEnlace.png';
+import { NavButton } from '../../components/index';
 
 
 const Nav = () =>  {
@@ -23,6 +25,11 @@ const Nav = () =>  {
         </TopNav>
         <Navigation>
             <img src={logoEnlace} alt="Logo" />
+            <div className='buttons'>
+                <NavButton label={'Involúcrate'} color={'#80DBCC'}  />
+                <NavButton label={'Dona ahora'} color={'#00B899'}  />
+            </div>
+            <span><RxHamburgerMenu/></span>
         </Navigation>
         <Menu>
             <ul>
@@ -32,6 +39,10 @@ const Nav = () =>  {
                 <li>Equipo</li>
                 <li>Contáctanos</li>
             </ul>
+            <div className='buttons'>
+                <NavButton label={'Involúcrate'} color={'#80DBCC'}  />
+                <NavButton label={'Dona ahora'} color={'#00B899'}  />
+            </div>
         </Menu>
     </NavStyle>
         
