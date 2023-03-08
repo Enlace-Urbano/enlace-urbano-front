@@ -1,4 +1,5 @@
 import { HomeStyle } from './HomeStyle'
+import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 
 

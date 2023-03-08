@@ -1,6 +1,6 @@
 import Link from 'react-router-dom'
-import { IoLogoInstagram, IoLogoLinkedin,IoMailSharp } from "react-icons/io5";
-import { ImPhone,  } from "react-icons/im";
+import { IoLogoInstagram, IoLogoLinkedin,IoMailSharp } from 'react-icons/io5';
+import { ImPhone,  } from 'react-icons/im';
 
 type Props = {}
 
