@@ -4,7 +4,6 @@ export const NavStyle = styled.nav`
 display: flex;
 flex-direction: column;
 width: 100%;
-height: 250px;
 position: fixed;
 top: 0;
 right: 0;
@@ -16,8 +15,8 @@ height: 200px;
 ul {
     text-decoration: none;
     list-style: none;
+    width: 100%;
 }
-
 
 `  
 
@@ -31,13 +30,15 @@ width: 100%;
 height: 70px;
 div {
     display: block;
+    margin-right: 1em;
 }
 a{
     svg {
         color: white;
         height: 35px;
         width: 35px;
-        padding: 15px;
+        margin: 15px;
+       
     }
     text-decoration: none;
     list-style: none;
@@ -52,6 +53,9 @@ ul{
 }
 @media screen and (max-width: 768px) {
 height: 60px;
+ul {
+    margin-right: 1em;
+}
 
 div {
     display: none;
@@ -84,11 +88,10 @@ img {
 span {
     display: block;
     svg{
-        padding: 15px;
         color: black;
-        width: 40px;
-        height: 40px;
-        margin: 35px
+        width: 35px;
+        height: 35px;
+        margin: 40px
     }
 }
 }
@@ -105,10 +108,18 @@ ul{
     text-align: center;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+}
+li:hover {
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+li:focus{
+    color:  #579288;
 }
 .buttons {
     display: none;

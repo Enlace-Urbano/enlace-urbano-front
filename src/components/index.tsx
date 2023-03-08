@@ -1,1 +1,1 @@
-export { default as NavButton }  from './navButton/NavButton';
+export { default as Nav }  from './nav/Nav';

@@ -1,6 +1,6 @@
 import { HomeStyle } from './HomeStyle'
 import { Link } from 'react-router-dom'
-import { Nav } from '../../elements/index'
+import { Nav } from '../../components/index'
 
 
 
@@ -10,8 +10,6 @@ const Home = () =>  {
     <>
     <HomeStyle>
     <Nav/>
-        <h1>Home </h1>
-
     </HomeStyle>
         
     </>
