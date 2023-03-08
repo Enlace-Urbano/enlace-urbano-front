@@ -8,7 +8,10 @@ flex-direction: column;
 width: 100%;
 background-color: #fdfdfd;
 margin-top: 60px;
+ul {
+    width: 100%;
 
+}
 
 li {
     padding: 15px;
@@ -16,7 +19,7 @@ li {
 }
 li:hover {
     transition: 0.2s;
-    background-color: #edeeedb7;
+    background-color: #edeeed7b;
     font-weight: bold;
 }
 

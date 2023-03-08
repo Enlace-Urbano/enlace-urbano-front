@@ -5,17 +5,15 @@ display: flex;
 flex-direction: column;
 width: 100%;
 position: fixed;
+background-color: white;
 top: 0;
 right: 0;
 
-@media screen and (max-width: 768px) {
-height: 200px;
-}
+
 
 ul {
     text-decoration: none;
     list-style: none;
-    width: 100%;
 }
 
 `  
@@ -51,8 +49,10 @@ ul{
     align-items: center;
     margin-right: 3em;
 }
+
 @media screen and (max-width: 768px) {
-height: 60px;
+height: 61px;
+
 ul {
     margin-right: 1em;
 }
@@ -99,7 +99,6 @@ span {
 
 export const Menu = styled.div`
 color: black;
-height: 80px;
 width: 100%;
 
 
