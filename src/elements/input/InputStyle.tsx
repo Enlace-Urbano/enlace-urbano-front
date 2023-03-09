@@ -16,4 +16,8 @@ color: gray;
     transition: 0.2s;
     border-bottom: 2px solid #579288;
 }
+
+@media screen and (max-width: 768px) {
+width: 272px;
+}
 `

@@ -10,6 +10,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+
+@media screen and (max-width: 768px) {
+width: 402px;
+height: 535px;
+}
 ` 
 
 
@@ -20,7 +25,10 @@ flex-direction: column;
 align-items: flex-start;
 justify-content: center;
 margin: 3em;
-
+@media screen and (max-width: 768px) {
+width: 272px;
+gap:24px;
+}
 
 ` 
 

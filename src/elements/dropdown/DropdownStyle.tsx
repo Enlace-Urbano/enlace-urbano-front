@@ -30,6 +30,7 @@ svg{
     height: 30px;
     width: 30px;
     margin: 45px 15px;
+    color: black;
 }
 `
 
