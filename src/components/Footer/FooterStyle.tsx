@@ -1,16 +1,17 @@
 import styled from "styled-components";
 
 export const FooterStyle=styled.footer`
-color:white;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
+color:white;
 background-color: #000000;
 align-items:center;
-justify-content: space-evenly;
 justify-items: center;
-justify-content: space-around;
+justify-content: center;
 text-decoration:none;
-position:fixed;
+gap: 4em;
+padding: 4em;
+position: relative;
 bottom:0;
 left:0;
 right:0;
@@ -25,14 +26,21 @@ span{
     justify-content: space-evenly;
     flex-wrap: nowrap;
     height: 100%;
+    margin-bottom: 1em;
+    gap: .5em;
 }
 
 span>div{
     display:flex;
-    justify-content: space-between;
-    align-items: center;
+
 }
 
+svg {
+padding: 0.2em;
+ width: 30px;
+ height: 30px;
+
+}
 @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
    
@@ -46,8 +54,8 @@ span>div{
 justify-content:flex-start ;
 
 svg{
-    margin-left:15px;
-    padding-right:5px;    
+    margin-left:5px;
+    margin-right: 15px;
     height: 30px;
     width:30px;
 }

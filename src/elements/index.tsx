@@ -4,3 +4,4 @@ export { default as Hero }  from './hero/Hero';
 export { default as Title }  from './title/Title';
 export { default as Input }  from './input/Input';
 export { default as Button }  from './button/Button';
+export { default as NumberCard }  from './numberCard/NumberCard';
