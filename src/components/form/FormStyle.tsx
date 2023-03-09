@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 
 export const FormStyle = styled.section`
-margin: 0 auto;
-background-color: aliceblue;
+background-color: white;
 width: 656px;
 height: 535px;
+margin: 0 auto;
 display: flex;
 flex-direction: column;
 align-items: center;
