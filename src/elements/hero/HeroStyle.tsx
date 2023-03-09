@@ -21,11 +21,11 @@ div {
 h1{
     margin-left: 1em;
     font-size: 64px;
-    font-weight: bold;
+    font-family: 'Calistoga';
     color: #ffffff;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 height: 502px;
 justify-content: center;
 margin-top: 200px;
@@ -36,4 +36,4 @@ h1{
     font-weight: bold;
 }
 }
-`  
+`      

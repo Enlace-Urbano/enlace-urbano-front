@@ -8,6 +8,7 @@ position: fixed;
 background-color: white;
 top: 0;
 right: 0;
+font-size: 16px;
 
 
 
@@ -100,17 +101,16 @@ span {
 export const Menu = styled.div`
 color: black;
 width: 100%;
-
-
 ul{
     padding: 10px;
+    height: 70px;
     text-align: center;
     display: flex;
     flex-direction: row;
     gap: 40px;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
 }
 li:hover {
     transition: 0.2s;

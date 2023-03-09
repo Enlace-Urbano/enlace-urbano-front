@@ -1,6 +1,6 @@
 import { HomeStyle } from './HomeStyle'
 import { Link } from 'react-router-dom'
-import { Nav } from '../../components/index'
+import { Form, Nav } from '../../components/index'
 import { Hero } from '../../elements/index'
 
 
@@ -12,6 +12,7 @@ const Home = () =>  {
     <HomeStyle>
     <Nav/>
     <Hero/>
+    <Form/>
     </HomeStyle>
         
     </>

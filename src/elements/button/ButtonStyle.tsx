@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const NavButtonStyle = styled.button<{ color: string }>`
-background-color: ${props => props.color};
-height: 80px;
-width: 192px;
+export const ButtonStyle = styled.button`
+background-color: black;
+color: white;
+height: 60px;
+width: 177px;
 border: none;
 font-size: 18px;
 
@@ -14,11 +15,11 @@ font-size: 18px;
 
 &:hover {
 background: #95fae9;
+color: black;
+
 }
 
 @media screen and (max-width: 768px) {
-height: 60px;
-width: 50%;
 font-size: 16px;
 }
 `
