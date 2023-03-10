@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { InstagramCardStyle } from './InstagramCardStyle';
+
 
 type Props = {}
 
@@ -26,7 +28,7 @@ const InstagramFeed = (props: Props) => {
   }, []);
 
   return (
-    <div>
+    <InstagramCardStyle>
       <h2>Instagram Feed</h2>
       <ul>
         {feed.map((post) => (
@@ -36,7 +38,7 @@ const InstagramFeed = (props: Props) => {
           </li>
         ))}
       </ul>
-    </div>
+    </InstagramCardStyle>
   );
 };
 export default InstagramFeed
