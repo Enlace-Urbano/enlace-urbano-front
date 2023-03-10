@@ -12,7 +12,7 @@ const InstagramFeed = (props: Props) => {
 
   useEffect(() => {
     const fetchInstagramFeed = async () => {
-      const token = 'IGQVJXcDFkc2NQX1JKZA0N1aUtVN0VYOHl3dU5QRTJYLVdmYk53TWp1RHMyWWVIYUY3aDFhdWpWcXpGaUVicENqOUM3SUY2dWE5cXBzOFJDZAGdKQk9UVG1pdmtkRGVTajJhLWdTZAWIyTkZAyWFlUdzJNdwZDZD';
+      const token = "IGQVJVT1lRYjFpQ2tVbkFBdmEtR24zeVA0a1B1ZA2JnN1BYeG4ybnF6M2RRMWF4MDF1d0U5RGhOMFBHNDRLdDVMTEhsdUNQc05Xd0h2NzVpbWV3ZAnl1Vi1HeDJkR0ZAJQlBwZADZA4MmJud2ZABR1FOcVIydQZDZD"
       try {
         const response = await axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url&access_token=${token}`);
         console.log(response.data.data)
