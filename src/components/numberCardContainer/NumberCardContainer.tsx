@@ -7,8 +7,9 @@ const NumberCardsContainer = () =>  {
     return (
         <>
         <Grid>
+        <div className="card1">
             <NumberCard label={'ccccccccccccccccccccccc'} number={345}  color={'black'} />
-      
+        </div>
         <div className="card2">
             <NumberCard label={'sss'} number={2545}  color={'#80DBCC'} />
         </div>
