@@ -16,9 +16,8 @@ background-color: ${props => props.color};
     transition: 0.2s;
     
 }
-
 @media screen and (max-width: 768px) {
-width: 272px;
+height: 194px;
 }
 `
 export const CardContainer = styled.div<{ color: string }>`
