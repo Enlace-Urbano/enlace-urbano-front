@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const NumberCardStyle = styled.div<{ color: string }>`
-width: 413px;
 height: 305px;
 display: flex;
 text-align: center;
 flex-direction: column;
 align-items: center;
-border-radius: 5px;
-justify-content: center;;
+justify-content: center;
 background-color: ${props => props.color};
 
 
@@ -18,7 +16,7 @@ background-color: ${props => props.color};
     
 }
 @media screen and (max-width: 768px) {
-height: 194px;
+/* width: 272px; */
 }
 `
 export const CardContainer = styled.div<{ color: string }>`
