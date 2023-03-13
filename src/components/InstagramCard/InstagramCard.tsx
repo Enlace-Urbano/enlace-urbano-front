@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { InstagramCardStyle } from './InstagramCardStyle';
+import Button from '../../elements/button/Button';
 
 
 type Props = {}
@@ -9,14 +10,13 @@ export type InstagramPost = {
   map(arg0: (post: any) => JSX.Element): React.ReactNode;
 }
 
-const InstagramFeed = (props: Props) => {
+const InstagramCard = (props: Props) => {
   const [feed, setFeed] = useState<InstagramPost>([]);
 
   useEffect(() => {
     const fetchInstagramFeed = async () => {
-      const token = "IGQVJVT1lRYjFpQ2tVbkFBdmEtR24zeVA0a1B1ZA2JnN1BYeG4ybnF6M2RRMWF4MDF1d0U5RGhOMFBHNDRLdDVMTEhsdUNQc05Xd0h2NzVpbWV3ZAnl1Vi1HeDJkR0ZAJQlBwZADZA4MmJud2ZABR1FOcVIydQZDZD"
       try {
-        const response = await axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url&access_token=${token}`);
+        const response = await axios.get(`https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url&access_token=${import.meta.env.VITE_IG_API_TOKEN}&limit=3`);
         console.log(response.data.data)
         setFeed(response.data.data);
       } catch (error) {
@@ -28,17 +28,18 @@ const InstagramFeed = (props: Props) => {
   }, []);
 
   return (
-    <InstagramCardStyle>
-      <h2>Instagram Feed</h2>
-      <ul>
+    <>
         {feed.map((post) => (
+          
+    <InstagramCardStyle>
           <li key={post.id}>
-            <img style={{"width":"200px"}} src={post.media_url} alt={post.caption} />
+            <img src={post.media_url} alt={post.caption} />
             <p>{post.caption}</p>
+            <Button label={'Ver mas'} />
           </li>
-        ))}
-      </ul>
     </InstagramCardStyle>
+        ))}
+        </>
   );
 };
-export default InstagramFeed
+export default InstagramCard
