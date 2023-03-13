@@ -7,6 +7,7 @@ display: flex;
 text-align: center;
 flex-direction: column;
 align-items: center;
+border-radius: 5px;
 justify-content: center;;
 background-color: ${props => props.color};
 

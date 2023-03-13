@@ -32,8 +32,7 @@ const Nav = () =>  {
         <Navigation>
             <img src={logoEnlace} alt="Logo" />
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#80DBCC'}  />
-                <NavButton label={'Dona ahora'} color={'#00B899'}  />
+                <NavButton label={'Involúcrate'} color={'#00B899'}  />
             </div>
             <span><RxHamburgerMenu onClick={() => setIsDropdownOpen(!isDropdownOpen)}/>
            
@@ -45,12 +44,10 @@ const Nav = () =>  {
                 <li>Proyectos</li>
                 <li>¿Qué hacemos?</li>
                 <li>Nosotros</li>
-                <li>Equipo</li>
                 <li>Contáctanos</li>
             </ul>
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#80DBCC'}  />
-                <NavButton label={'Dona ahora'} color={'#00B899'}  />
+                <NavButton label={'Involúcrate'} color={'#00B899'}  />
             </div>
         </Menu>
     {isDropdownOpen && (
@@ -59,7 +56,6 @@ const Nav = () =>  {
             { label: 'Proyectos', value: '#' },
             { label: '¿Qué hacemos?', value: '#' },
             { label: 'Nosotros', value: '#' },
-            { label: 'Equipo', value: '#' },
             { label: 'Contáctanos', value: '#' },
           ]}
           onSelect={handleSelect}

@@ -5,7 +5,9 @@ background-color: ${props => props.color};
 height: 80px;
 width: 192px;
 border: none;
+border-radius: 5px;
 font-size: 18px;
+color: white;
 
 &:focus{
     transition: 0.2s;

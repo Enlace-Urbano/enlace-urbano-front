@@ -6,6 +6,7 @@ color: white;
 height: 60px;
 width: 177px;
 border: none;
+border-radius: 5px;
 font-size: 18px;
 
 &:focus{
@@ -16,6 +17,7 @@ font-size: 18px;
 &:hover {
 background: #95fae9;
 color: black;
+border-radius: 5px;
 
 }
 
