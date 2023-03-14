@@ -9,3 +9,17 @@
     font-family: 'Lato', Arial, Helvetica, sans-serif;  
   }
   
+  body {
+    background-color: var(--color-white);
+
+  }
+
+  :root {
+    --color-white: #fafcfd;
+    --color-green: #00B899;
+    --color-lightgreen: #80DBCC;
+    --color-blue: #025393;
+    --color-highlights: #00C27A;
+    --color-black: #131313;
+    }
+    
