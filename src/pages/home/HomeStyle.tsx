@@ -12,7 +12,7 @@ background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
 padding: 5em;
-`  
+`
 
 
 export const TextContainer = styled.section`

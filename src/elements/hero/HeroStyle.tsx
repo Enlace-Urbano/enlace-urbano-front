@@ -3,7 +3,7 @@ import hero from './../../assets/hero.png'
 
 
 export const HeroStyle = styled.section`
-margin: 240px 0 0 0;
+margin-top: 240px;
 background-image: url(${hero});
 background-repeat: no-repeat;
 background-position: center;
@@ -36,4 +36,4 @@ h1{
     font-weight: bold;
 }
 }
-`      
+`
