@@ -3,12 +3,12 @@ import hero from './../../assets/hero.png'
 
 
 export const HeroStyle = styled.section`
-margin: 240px 0 0 0;
+margin: 200px 0 0 0;
 background-image: url(${hero});
 background-repeat: no-repeat;
 background-position: center;
 background-size: cover;
-height: 55vh;
+height: 60vh;
 width: 100%;
 display: flex;
 align-items: center;

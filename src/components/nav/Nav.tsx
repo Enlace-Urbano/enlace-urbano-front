@@ -32,7 +32,7 @@ const Nav = () =>  {
         <Navigation>
             <img src={logoEnlace} alt="Logo" />
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#00B899'}  />
+                <NavButton label={'Involúcrate'} color={'var(--color-green)'}  />
             </div>
             <span><RxHamburgerMenu onClick={() => setIsDropdownOpen(!isDropdownOpen)}/>
            
@@ -41,18 +41,20 @@ const Nav = () =>  {
         
         <Menu>
             <ul>
+                <li>Inicio</li>
                 <li>Proyectos</li>
                 <li>¿Qué hacemos?</li>
                 <li>Nosotros</li>
                 <li>Contáctanos</li>
             </ul>
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#00B899'}  />
+                <NavButton label={'Involúcrate'} color={'var(--color-green)'}  />
             </div>
         </Menu>
     {isDropdownOpen && (
         <Dropdown
           options={[
+            { label: 'Inicio', value: '#' },
             { label: 'Proyectos', value: '#' },
             { label: '¿Qué hacemos?', value: '#' },
             { label: 'Nosotros', value: '#' },

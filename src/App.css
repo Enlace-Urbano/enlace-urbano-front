@@ -16,10 +16,12 @@
 
   :root {
     --color-white: #fafcfd;
-    --color-green: #00B899;
+    --color-green: #0CB59A;
     --color-lightgreen: #80DBCC;
-    --color-blue: #025393;
+    --color-blue: #005493;
     --color-highlights: #00C27A;
     --color-black: #131313;
+    --color-lightblue: #E3EEF6;
+
     }
     

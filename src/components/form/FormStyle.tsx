@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const FormStyle = styled.section`
-background-color: white;
+background-color: var(--color-white);
 border-radius: 5px;
 width: 656px;
 height: 535px;

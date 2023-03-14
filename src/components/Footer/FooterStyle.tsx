@@ -4,7 +4,7 @@ export const FooterStyle=styled.footer`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 color:white;
-background-color: #000000;
+background-color: var(--color-black);
 align-items:center;
 justify-items: center;
 justify-content: center;
@@ -18,7 +18,7 @@ right:0;
 
 a{
     text-decoration: none;
-    color:white;
+    color:var(--color-white);
 }
 span{
     display:flex;

@@ -16,7 +16,7 @@ padding: 5em;
 
 
 export const TextContainer = styled.section`
-padding: 10em;
+padding: 15em;
 display: flex;
 align-items: center;
 justify-content: center;
