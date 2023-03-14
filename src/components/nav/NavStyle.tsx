@@ -24,9 +24,10 @@ background-color: black;
 display: flex;
 flex-direction: row;
 justify-content: flex-end;
+align-items: center;
 color: aliceblue;
 width: 100%;
-height: 70px;
+height: 50px;
 div {
     display: block;
     margin-right: 1em;
@@ -71,6 +72,10 @@ align-items: center;
 width: 100%;
 margin: 0 20px;
 justify-content: space-between;
+img {
+    height: 40px;
+    margin-left: 1em;
+}
 
 span {
     display: none;
@@ -114,7 +119,7 @@ ul{
 }
 li:hover {
     transition: 0.2s;
-    font-weight: bold;
+    color: #00B899;
 }
 
 li:focus{

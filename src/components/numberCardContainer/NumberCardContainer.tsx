@@ -7,14 +7,10 @@ const NumberCardsContainer = () =>  {
     return (
         <>
         <Grid>
-        <div className="card1">
-            <NumberCard label={'ccccccccccccccccccccccc'} number={345}  color={'black'} />
-        </div>
-        <div className="card2">
-            <NumberCard label={'sss'} number={2545}  color={'#80DBCC'} />
+            <NumberCard label={'Forem ipsum dolor sit amet, consectetur adipiscing elit. '} number={345}  color={'#025393'} />
+        <NumberCard label={'Forem ipsum dolor sit amet, consectetur adipiscing elit.'} number={2545}  color={'#80DBCC'} />
       
-        <NumberCard label={'sss'} number={3123}  color={'#00B899'} />
-        </div>     
+        <NumberCard label={'Forem ipsum dolor sit amet, consectetur adipiscing elit.'} number={3123}  color={'#00B899'} />
         </Grid>
     
         </>

@@ -3,6 +3,7 @@ import pic1 from './../../assets/pic1.png'
 
 
 export const HomeStyle = styled.section`
+
 `  
 
 export const FormContainer = styled.section`

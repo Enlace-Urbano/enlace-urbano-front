@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavButtonStyle = styled.button<{ color: string }>`
 background-color: ${props => props.color};
-height: 80px;
+height: 70px;
 width: 192px;
 border: none;
 border-radius: 5px;

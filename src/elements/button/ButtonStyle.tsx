@@ -15,8 +15,8 @@ font-size: 18px;
 }
 
 &:hover {
-background: #95fae9;
-color: black;
+background: #00B899;
+font-weight: bold;
 border-radius: 5px;
 
 }

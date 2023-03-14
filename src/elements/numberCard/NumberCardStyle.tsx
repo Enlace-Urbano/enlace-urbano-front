@@ -7,6 +7,7 @@ text-align: center;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+border-radius: 5px;
 background-color: ${props => props.color};
 
 
@@ -34,6 +35,7 @@ h3 {
 font-weight: 500;
 font-size: 20px;
 line-height: 30px;
+padding: 0 3em;
 }
 ` 
 
