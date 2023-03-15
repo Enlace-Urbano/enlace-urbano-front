@@ -5,10 +5,29 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import logoEnlace from '../../assets/logoEnlace.png';
 import { Dropdown, NavButton } from '../../elements/index';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 const Nav = () =>  {
+
+    const hideNav = useRef(null);
+    useEffect(()=>{
+        const el = hideNav.current
+        gsap.fromTo(el, {
+            y: 0,
+        },{
+            y: -50,
+            duration:1,
+            scrollTrigger: {
+                trigger: el,
+                toggleActions: "pause restart reverse pause"
+            }
+        })
+    },[])
+
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const handleSelect = (value: string) => {
@@ -16,9 +35,8 @@ const Nav = () =>  {
     };
     return (
     <>
-    <NavStyle>
-        
-        <TopNav>
+    <NavStyle ref={hideNav}>
+        <TopNav >
             <div>
                 <a href="https://www.linkedin.com/company/enlace-urbano/"><BsLinkedin/></a>
                 <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram/></a>
@@ -29,6 +47,7 @@ const Nav = () =>  {
             <li> ESP </li>
            </ul>
         </TopNav>
+        
         <Navigation>
             <img src={logoEnlace} alt="Logo" />
             <div className='buttons'>

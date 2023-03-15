@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const Grid = styled.div`
- width: 100vw;
+ width: 100%;
  display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+ padding: 1em;
+ grid-template-columns: 1fr 1fr 1fr;
+ 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { 
+padding: 0;
 display: grid;
 grid-template-areas: "col1 col1"
                      "col2 col3";
