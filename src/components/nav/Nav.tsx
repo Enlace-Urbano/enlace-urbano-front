@@ -18,12 +18,13 @@ const Nav = () =>  {
         const el = hideNav.current
         gsap.fromTo(el, {
             y: 0,
+            end: 99999,
         },{
             y: -50,
-            duration: 0.01,
+            duration: 0.5,
             scrollTrigger: {
                 trigger: el,
-                toggleActions: "pause none reverse pause"
+                toggleActions: "none play reverse play"
             }
         })
     },[])
