@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { IoLogoInstagram, IoLogoLinkedin, IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
-import { FooterStyle } from "./FooterStyle";
+import { FooterBottom, FooterStyle } from "./FooterStyle";
+import logoBlack from '../../assets/logoBlack.svg';
 
 type Props = {};
 
 const Footer = (props: Props) => {
   return (
+    <>
     <FooterStyle>
       <span>
         <Link to="/Involucrate">
@@ -42,7 +44,13 @@ const Footer = (props: Props) => {
         </div>
       </span>
     </FooterStyle>
+    <FooterBottom>
+    <img src={logoBlack} alt="Logo" />
+    <div>
+    <p> © Copyright Enlace Urbano 2023</p>
+    </div>
+    </FooterBottom>
+</>
   );
 };
-
 export default Footer;

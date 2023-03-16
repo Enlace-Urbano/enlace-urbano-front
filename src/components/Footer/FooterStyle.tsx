@@ -65,3 +65,31 @@ a{
 }
 }
 `
+export const FooterBottom =styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+align-items: center;
+justify-items: center;
+height: 6em;
+img {
+grid-column: 2;
+height: 40px;
+}
+p{
+grid-column: 3;
+font-size: 14px;
+color: gray;
+}
+@media only screen and (max-width: 600px) {
+display: flex;
+flex-direction: column;
+margin: 2em;
+}
+img {
+height: 30px;
+}
+p{
+margin: 2em;
+
+}
+`

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { BsLinkedin } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import logoEnlace from '../../assets/logoEnlace.png';
+import logoBlack from '../../assets/logoBlack.svg';
 import { Dropdown, NavButton } from '../../elements/index';
 import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap'
@@ -20,10 +20,10 @@ const Nav = () =>  {
             y: 0,
         },{
             y: -50,
-            duration:1,
+            duration: 0.01,
             scrollTrigger: {
                 trigger: el,
-                toggleActions: "pause restart reverse pause"
+                toggleActions: "pause none reverse pause"
             }
         })
     },[])
@@ -49,7 +49,7 @@ const Nav = () =>  {
         </TopNav>
         
         <Navigation>
-            <img src={logoEnlace} alt="Logo" />
+            <img src={logoBlack} alt="Logo" />
             <div className='buttons'>
                 <NavButton label={'Involúcrate'} color={'var(--color-green)'}  />
             </div>

@@ -6,12 +6,13 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 width: 100%;
-height: 80vh;
+height:72vh;
 background-color: #fdfdfd;
 
 ul {
     width: 100%;
-
+    height: 70%;
+    margin-top: 4em;
 }
 
 li {
