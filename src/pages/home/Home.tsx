@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import { Form, InstagramContainer, Nav } from '../../components/index'
 import { Hero } from '../../elements/index'
-import NumberCardsContainer from '../../components/numberCardContainer/NumberCardContainer'
+import NumberCardsContainer from '../../components/NumberCardContainer/NumberCardContainer'
 
 
 

@@ -16,14 +16,16 @@ const Nav = () =>  {
     const hideNav = useRef(null);
     useEffect(()=>{
         const el = hideNav.current
-        gsap.fromTo(el, {
+        gsap.fromTo(
+            el, 
+            {
             y: 0,
         },{
             y: -50,
-            duration: 0.01,
+            duration: 0.5,
             scrollTrigger: {
                 trigger: el,
-                toggleActions: "pause none reverse pause"
+                toggleActions: "none play reverse play"
             }
         })
     },[])
