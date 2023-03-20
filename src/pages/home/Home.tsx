@@ -14,7 +14,7 @@ const Home = () =>  {
     <HomeStyle>
     <Nav/>
     <Hero/>
-    <MainCard color={'Orange'} h1label={'Juan Pedro'} plabel={'alsdkfjaslkdfjlasdjflsadjflsadjflkj'}/>
+    <MainCard color={'var(--color-green)'} h1label={'Juan Pedro'} plabel={'alsdkfjaslkdfjlasdjflsadjflsadjflkj'} lettercolor={'var(--color-white)'}/>
     <NumberCardsContainer/>
    <TextContainer>
     <h1>¿Qué hacemos?</h1>
