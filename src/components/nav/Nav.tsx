@@ -1,4 +1,4 @@
-import { Menu, Navigation, NavStyle, TopNav } from './NavStyle'
+import { Menu, Navigation, NavStyle } from './NavStyle'
 import { Link } from 'react-router-dom'
 import { BsLinkedin } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
@@ -18,7 +18,7 @@ const Nav = () =>  {
     <>
     <NavStyle>
         
-        <TopNav>
+        {/* <TopNav>
             <div>
                 <a href="https://www.linkedin.com/company/enlace-urbano/"><BsLinkedin/></a>
                 <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram/></a>
@@ -28,28 +28,32 @@ const Nav = () =>  {
             | 
             <li> ESP </li>
            </ul>
-        </TopNav>
+        </TopNav> */}
         <Navigation>
             <img src={logoEnlace} alt="Logo" />
+
+            <Menu>
+                <ul>
+                    <li>Inisio</li>
+                    <li>Nosotros</li>
+                    <li>Proyectos</li>
+                    <li>Nuestro dia a dia</li>
+                    <li>Servicios</li>
+                </ul>
+                {/* <div className='buttons'>
+                    <NavButton label={'Involúcrate'} color={'#00B899'}  />
+                </div> */}
+            </Menu>
+
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#00B899'}  />
+                <NavButton label={'Contactanos'} color={'#00B899'}  />
             </div>
             <span><RxHamburgerMenu onClick={() => setIsDropdownOpen(!isDropdownOpen)}/>
            
             </span>
         </Navigation>
         
-        <Menu>
-            <ul>
-                <li>Proyectos</li>
-                <li>¿Qué hacemos?</li>
-                <li>Nosotros</li>
-                <li>Contáctanos</li>
-            </ul>
-            <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#00B899'}  />
-            </div>
-        </Menu>
+       
     {isDropdownOpen && (
         <Dropdown
           options={[

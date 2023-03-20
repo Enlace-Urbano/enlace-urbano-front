@@ -5,7 +5,7 @@ background-color: ${props => props.color};
 height: 70px;
 width: 192px;
 border: none;
-border-radius: 5px;
+border-radius: 0px;
 font-size: 18px;
 color: white;
 
