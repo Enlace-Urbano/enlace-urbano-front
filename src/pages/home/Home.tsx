@@ -1,7 +1,7 @@
 import { FormContainer, HomeStyle, TextContainer } from './HomeStyle'
 import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
-import { Form, InstagramContainer, Nav } from '../../components/index'
+import { Form, InstagramContainer, Nav, MainCard } from '../../components/index'
 import { Hero } from '../../elements/index'
 import NumberCardsContainer from '../../components/numberCardContainer/NumberCardContainer'
 
@@ -14,6 +14,7 @@ const Home = () =>  {
     <HomeStyle>
     <Nav/>
     <Hero/>
+    <MainCard color={'Orange'} h1label={'Juan Pedro'} plabel={'alsdkfjaslkdfjlasdjflsadjflsadjflkj'}/>
     <NumberCardsContainer/>
    <TextContainer>
     <h1>¿Qué hacemos?</h1>
