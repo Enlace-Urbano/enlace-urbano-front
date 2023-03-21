@@ -6,5 +6,5 @@ export { default as Input }  from './input/Input';
 export { default as Button }  from './button/Button';
 export { default as NumberCard }  from './numberCard/NumberCard';
 export { default as BorderButton }  from './borderButton/BorderButton';
-
+export { default as Banner }  from './banner/Banner';
  

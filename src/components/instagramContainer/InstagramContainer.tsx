@@ -12,7 +12,6 @@ const InstagramContainer = (props: Props) => {
 
   return (<>
     <InstagramContainerStyle>
-      <Title label={'Actividad reciente'} />
       <Container> 
         <InstagramCard />
       </Container>
