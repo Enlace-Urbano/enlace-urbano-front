@@ -19,8 +19,8 @@ const Login = (props: Props) => {
         <LoginForm onSubmit={handleSubmit}>
           <div className="formContainer">
             <Title label={'Hola Enlace'} />
-            {/* <Input placeholder='Usuario' />
-            <Input placeholder='Contraseña' /> */}
+            <Input placeholder='Usuario' />
+            <Input placeholder='Contraseña' />
             <Button label={'Iniciar sesión'} />
           </div>
         </LoginForm>
