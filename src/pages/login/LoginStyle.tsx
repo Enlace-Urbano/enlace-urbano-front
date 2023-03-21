@@ -27,7 +27,7 @@ footer img {
 }
 `
 
-export const LoginForm = styled.div`
+export const LoginForm = styled.form`
 display: flex;
 justify-content: center;
 
