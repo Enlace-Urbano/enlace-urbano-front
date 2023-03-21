@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Form, InstagramContainer, Nav, MainCard } from '../../components/index'
 import { Hero } from '../../elements/index'
 import NumberCardsContainer from '../../components/numberCardContainer/NumberCardContainer'
-
+import quienes from '../../assets/quienes-somos.png'
 
 
 const Home = () =>  {
@@ -14,7 +14,7 @@ const Home = () =>  {
     <HomeStyle>
     <Nav/>
     <Hero/>
-    <MainCard color={'var(--color-green)'} h1label={'Juan Pedro'} plabel={'alsdkfjaslkdfjlasdjflsadjflsadjflkj'} lettercolor={'var(--color-white)'}/>
+    <MainCard color={'var(--color-white)'} h1label={'¿Quiénes somos?'} plabel={'Enlace Urbano nace por una inquietud común: El explosivo aumento deasentamientos informales, una de las manifestaciones más rotundas yelocuentes de la pobreza multi-escalar y la desigualdad en Chile y Latinoamérica'} lettercolor={'var(--color-black)'} src={quienes}  />
     <NumberCardsContainer/>
    <TextContainer>
     <h1>¿Qué hacemos?</h1>
