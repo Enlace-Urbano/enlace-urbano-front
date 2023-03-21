@@ -2,12 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    scroll-behavior: smooth;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;  
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;  
+}
+
+/* RESET */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
   
   body {
     background-color: var(--color-white);
@@ -20,7 +27,7 @@
     --color-lightgreen: #80DBCC;
     --color-blue: #005493;
     --color-highlights: #00C27A;
-    --color-black: #131313;
+    --color-black: #424242;
     --color-lightblue: #E3EEF6;
 
     }

@@ -1,12 +1,14 @@
 import { HeroStyle } from './HeroStyle'
+import videoHero from '../../assets/videoHero.mp4'
 
 const Hero = () =>  {
 
     return (
     <>
     <HeroStyle>
+        <video src={videoHero} autoPlay loop></video>
         <div>
-            <h1> Lorem ipsum dolor sit amet consectetur.</h1>
+            <h1> Innovación social para una mejor habitabilidad y calidad de vida de las comunidades.</h1>
         </div>
     </HeroStyle>    
     </>
