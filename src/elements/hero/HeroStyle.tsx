@@ -11,9 +11,10 @@ margin-bottom: 7.1em;
 
 div {
     position: absolute;
-    padding: 0.5em;
-    width: 70%;
-    margin-top: 15%;
+    padding: 1em;
+    width: 60%;
+    height: 100vh;
+    margin-top: 30%;
     z-index: -1;
 
 }

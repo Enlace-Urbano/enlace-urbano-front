@@ -1,28 +1,25 @@
-import { CardButton, MainCardContainer, MainCardStyle} from './MainCardStyle'
+import { MainCardContainer, MainCardStyle} from './MainCardStyle'
 import  pic1  from '../../assets/pic1.png'
-import { Button } from '../../elements/index'
+import { BorderButton } from '../../elements/index'
 
 interface CardProps  {
     color: string
     h1label: string
     plabel:string
     lettercolor:string
-    src:string
   }
 
- const MainCard: React.FC<CardProps> = ({h1label, plabel, lettercolor , color , src}) => ( 
+ const MainCard: React.FC<CardProps> = ({h1label, plabel, lettercolor , color }) => ( 
    
         <>
-        <MainCardContainer>
+        {/* <MainCardContainer>
+        <img src= {src} alt="foto" />
+        </MainCardContainer> */}
 
         <MainCardStyle lettercolor={lettercolor} color={color} > 
         <h1>{h1label}</h1>
         <p>{plabel}</p>
-        <CardButton > Ver más </CardButton>
         </MainCardStyle>
-        <img src= {src} alt="foto" />
-        </MainCardContainer>
-
         </>
     )
     

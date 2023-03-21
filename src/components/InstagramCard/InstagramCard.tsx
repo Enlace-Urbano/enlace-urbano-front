@@ -3,7 +3,6 @@ import axios from 'axios';
 import { InstagramCardStyle } from './InstagramCardStyle';
 import Button from '../../elements/button/Button';
 
-
 type Props = {}
 
 export type InstagramPost = {
