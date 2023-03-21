@@ -3,13 +3,8 @@ import Footer from '../../components/Footer/Footer'
 import { Link } from 'react-router-dom'
 import { Form, InstagramContainer, Nav, MainCard } from '../../components/index'
 import { Hero } from '../../elements/index'
-<<<<<<< HEAD
-import NumberCardsContainer from '../../components/NumberCardContainer/NumberCardContainer'
-
-=======
 import NumberCardsContainer from '../../components/numberCardContainer/NumberCardContainer'
 import quienes from '../../assets/quienes-somos.png'
->>>>>>> da957579775fbfe9cc7ef640cfb47eef9e5b2040
 
 
 const Home = () =>  {

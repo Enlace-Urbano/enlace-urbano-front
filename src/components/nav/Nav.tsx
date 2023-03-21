@@ -22,11 +22,7 @@ const Nav = () =>  {
             y: 0,
             end: 99999,
         },{
-<<<<<<< HEAD
-            y: -50,
-=======
             y: -70,
->>>>>>> da957579775fbfe9cc7ef640cfb47eef9e5b2040
             duration: 0.5,
             scrollTrigger: {
                 trigger: el,
