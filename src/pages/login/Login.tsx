@@ -2,16 +2,43 @@ import { Button, Input, Title } from '../../elements'
 import { LoginForm, LoginStyle } from '../login/LoginStyle'
 import login from '../../assets/login.png'
 import logoBlack from '../../assets/logoBlack.svg'
-import React, { FormEventHandler, useState } from 'react'
+import { FormEventHandler, useState } from 'react'
 import { useNavigate } from 'react-router'
-import axios from 'axios'
+import { authService } from '../../features/auth/services/auth.service'
 
-type Props = {
-  handleSubmit: FormEventHandler<HTMLFormElement>
+
+interface LoginFormValues {
+  username: string;
+  password: string;
 }
 
-const Login = (props: Props) => {
-  const { handleSubmit } = props
+const Login = () => {
+
+  const navigate = useNavigate()
+  const [loggedInUser, setLoggedInUser] = useState<string | null>(null)
+
+  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault()
+
+    const formValues: LoginFormValues = {
+      username: (e.target as HTMLFormElement).username.value,
+      password: (e.target as HTMLFormElement).password.value
+    }
+
+    try {
+      const result = await authService.login(formValues)
+      localStorage.setItem('token', result.data.access_token)
+
+      setLoggedInUser(localStorage.getItem('token'))
+
+      navigate('/', { replace: true })
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   return (
     <>
       <LoginStyle>
@@ -19,8 +46,8 @@ const Login = (props: Props) => {
         <LoginForm onSubmit={handleSubmit}>
           <div className="formContainer">
             <Title label={'Hola Enlace'} />
-            <Input placeholder='Usuario' />
-            <Input placeholder='Contraseña' />
+            <Input placeholder='Usuario' name='username' />
+            <Input placeholder='Contraseña' type='password' name='password' />
             <Button label={'Iniciar sesión'} />
           </div>
         </LoginForm>
@@ -36,7 +63,5 @@ const Login = (props: Props) => {
       </LoginStyle>
     </>
   )
-
 }
 export default Login
-

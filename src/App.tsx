@@ -8,33 +8,11 @@ import { authService } from './features/auth/services/auth.service'
 
 function App() {
 
-  const navigate = useNavigate()
-  const [loggedInUser, setLoggedInUser] = useState<string | null>(null)
-
-  const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault()
-
-    try {
-      const result = await authService.login({
-        username: 'ChanChan',
-        password: 'gato'
-      })
-      localStorage.setItem('token', result.data.access_token)
-
-      setLoggedInUser(localStorage.getItem('token'))
-
-      navigate('/', { replace: true })
-
-    } catch (error) {
-      console.log(error)
-    }
-
-  }
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/nosotros" element={<About />} />
-      <Route path="/admin/login" element={<Login handleSubmit={handleSubmit} />} />
+      <Route path="/admin/login" element={<Login />} />
     </Routes>
   )
 }
