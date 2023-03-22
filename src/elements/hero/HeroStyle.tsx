@@ -4,17 +4,17 @@ import styled from "styled-components";
 export const HeroStyle = styled.section`
 display: flex;
 align-items: center;
-height: 85vh;
-margin-bottom: 7.1em;
+height: 100vh;
+position: relative;
 
 
 
 div {
     position: absolute;
     padding: 1em;
-    width: 60%;
+    width: 70%;
     height: 100vh;
-    margin-top: 30%;
+    margin-top: 35%;
     z-index: -1;
 
 }
@@ -28,18 +28,39 @@ video {
     filter: brightness(0.5);
     z-index: -1;
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  
 
 }
 
 @media screen and (max-width: 800px) {
-height: 502px;
+height: 100vh;
+width: 100%;
+display: flex;
 justify-content: center;
-margin-top: 200px;
+align-items: center;
 
-h1{
-    margin: 0 auto;
+
+div {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30em;
+    padding: 2em;
+  
+
+}
+
+h1{ 
     font-size: 32px;
     font-weight: bold;
+}
+
+video {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+
 }
 }
 `

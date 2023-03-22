@@ -8,10 +8,7 @@ margin-top: 0 auto;
 img{
     width: 50%;
     height: 80vh;
-}
-
-
- 
+} 
 `
 export const MainCardStyle = styled.div<{ color: string , lettercolor: string }>`
 background-color: ${props => props.color};
@@ -28,12 +25,10 @@ gap: 2em;
 h1{
     font-family: "Calistoga";
     font-size: 64px;
-
 }
 p{
     font-family: "Lato";
     font-size: 18px;
     width: 80%;
 }
-
 `

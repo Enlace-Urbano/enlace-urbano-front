@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const BorderButtonStyle =styled.button`
-    color: var(--color-black);
+    color: var(--color-white);
     background-color: transparent;
     height: 60px;
     width: 177px;
-    border: 3px solid var(--color-black);
+    border: 3px solid var(--color-white);
     border-radius: 5px;
     font-size: 18px;
 
@@ -13,7 +13,8 @@ export const BorderButtonStyle =styled.button`
     &:hover {
     font-weight: bold;
     border-radius: 15px;
-    border: 3px solid var(--color-green);
+    border: 3px solid ;
+    background-color: var(--color-green);
 
     
     }
