@@ -8,6 +8,7 @@ flex-direction: column;
 width: 100%;
 height:72vh;
 background-color: #fdfdfd;
+;
 
 ul {
     width: 100%;

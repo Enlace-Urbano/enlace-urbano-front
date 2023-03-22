@@ -1,5 +1,6 @@
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsLinkedin } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 import {DropdownStyle, Line} from './DropdownStyle';
 
 interface DropdownProps {
@@ -16,9 +17,10 @@ const Dropdown = ({ options, onSelect }: DropdownProps)=>  {
 
   <ul>
     {options.map(({ label, value }) => (
-      <li key={value} onClick={() => onSelect(value)}>
+      <li>
+        <Link to={value} style={{textDecoration: 'none', color: 'var(--color-black)' }} onClick={() => onSelect(value)}>
         {label}
-      </li>
+      </Link></li>
     ))}
   </ul>
 
