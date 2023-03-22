@@ -23,7 +23,7 @@ export const TextContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 3em;
+    margin: 0
     gap: 2em;
     h1 {
       margin-top: 2em;

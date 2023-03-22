@@ -26,4 +26,19 @@ export const BannerStyle = styled.div`
     font-weight: 400;
     width: 52%;
   }
+  @media screen and (max-width: 768px) {
+    height: 100vh;
+    padding: 0.5em;
+    gap: 2em;
+  
+    h1 {
+      font-size: 20px;
+      width: 70%;
+    }
+    h2 {
+      align-self: flex-end;
+      font-size: 20px;
+      width: 70%;
+    }
+  }
 `;
