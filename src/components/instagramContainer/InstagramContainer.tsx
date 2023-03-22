@@ -12,12 +12,11 @@ const InstagramContainer = (props: Props) => {
 
   return (<>
     <InstagramContainerStyle>
-  <Title label={'Actividad reciente'} />
-      <Container>
-      
-      <InstagramCard />
+      <Title label={'Actividad reciente'} />
+      <Container> 
+        <InstagramCard />
       </Container>
-      </InstagramContainerStyle>
+    </InstagramContainerStyle>
 </>
   );
 };

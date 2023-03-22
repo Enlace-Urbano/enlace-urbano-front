@@ -14,7 +14,7 @@ color: gray;
 
 &:focus{
     transition: 0.2s;
-    border-bottom: 2px solid #579288;
+    border-bottom: 2px solid var(--color-highlights);
 }
 
 @media screen and (max-width: 768px) {

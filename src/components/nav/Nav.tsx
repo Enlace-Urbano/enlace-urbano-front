@@ -3,12 +3,32 @@ import { Link } from 'react-router-dom'
 import { BsLinkedin } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import logoEnlace from '../../assets/logoEnlace.png';
+import logoBlack from '../../assets/logoBlack.svg';
 import { Dropdown, NavButton } from '../../elements/index';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 const Nav = () =>  {
+
+    const hideNav = useRef(null);
+    useEffect(()=>{
+        const el = hideNav.current
+        gsap.fromTo(el, {
+            y: 0,
+            end: 99999,
+        },{
+            y: -50,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: el,
+                toggleActions: "none play reverse play"
+            }
+        })
+    },[])
+
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const handleSelect = (value: string) => {
@@ -16,9 +36,8 @@ const Nav = () =>  {
     };
     return (
     <>
-    <NavStyle>
-        
-        <TopNav>
+    <NavStyle ref={hideNav}>
+        <TopNav >
             <div>
                 <a href="https://www.linkedin.com/company/enlace-urbano/"><BsLinkedin/></a>
                 <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram/></a>
@@ -29,10 +48,11 @@ const Nav = () =>  {
             <li> ESP </li>
            </ul>
         </TopNav>
+        
         <Navigation>
-            <img src={logoEnlace} alt="Logo" />
+            <img src={logoBlack} alt="Logo" />
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#00B899'}  />
+                <NavButton label={'Involúcrate'} color={'var(--color-green)'}  />
             </div>
             <span><RxHamburgerMenu onClick={() => setIsDropdownOpen(!isDropdownOpen)}/>
            
@@ -41,18 +61,20 @@ const Nav = () =>  {
         
         <Menu>
             <ul>
+                <li>Inicio</li>
                 <li>Proyectos</li>
                 <li>¿Qué hacemos?</li>
                 <li>Nosotros</li>
                 <li>Contáctanos</li>
             </ul>
             <div className='buttons'>
-                <NavButton label={'Involúcrate'} color={'#00B899'}  />
+                <NavButton label={'Involúcrate'} color={'var(--color-green)'}  />
             </div>
         </Menu>
     {isDropdownOpen && (
         <Dropdown
           options={[
+            { label: 'Inicio', value: '#' },
             { label: 'Proyectos', value: '#' },
             { label: '¿Qué hacemos?', value: '#' },
             { label: 'Nosotros', value: '#' },

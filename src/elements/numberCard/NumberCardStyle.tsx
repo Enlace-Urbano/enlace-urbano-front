@@ -17,7 +17,7 @@ background-color: ${props => props.color};
     
 }
 @media screen and (max-width: 768px) {
-/* width: 272px; */
+height: 194px;
 }
 `
 export const CardContainer = styled.div<{ color: string }>`
@@ -36,6 +36,19 @@ font-weight: 500;
 font-size: 20px;
 line-height: 30px;
 padding: 0 3em;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+font-size: 24px;
+}
+
+h3 {
+font-size: 16px;
+line-height: 20px;
+padding: 0 1em;
+
+}
 }
 ` 
 

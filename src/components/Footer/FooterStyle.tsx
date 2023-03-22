@@ -4,7 +4,7 @@ export const FooterStyle=styled.footer`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 color:white;
-background-color: #000000;
+background-color: var(--color-black);
 align-items:center;
 justify-items: center;
 justify-content: center;
@@ -18,7 +18,7 @@ right:0;
 
 a{
     text-decoration: none;
-    color:white;
+    color:var(--color-white);
 }
 span{
     display:flex;
@@ -63,5 +63,33 @@ svg{
 a{
     margin-bottom: 10px;
 }
+}
+`
+export const FooterBottom =styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+align-items: center;
+justify-items: center;
+height: 6em;
+img {
+grid-column: 2;
+height: 40px;
+}
+p{
+grid-column: 3;
+font-size: 14px;
+color: gray;
+}
+@media only screen and (max-width: 600px) {
+display: flex;
+flex-direction: column;
+margin: 2em;
+}
+img {
+height: 30px;
+}
+p{
+margin: 2em;
+
 }
 `

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ButtonStyle = styled.button`
-background-color: black;
-color: white;
+background-color: var(--color-black);
+color: var(--color-white);
 height: 60px;
 width: 177px;
 border: none;
@@ -15,7 +15,7 @@ font-size: 18px;
 }
 
 &:hover {
-background: #00B899;
+background: var(--color-green);
 font-weight: bold;
 border-radius: 5px;
 

@@ -11,13 +11,12 @@ right: 0;
 font-size: 16px;
 
 
-
 ul {
     text-decoration: none;
     list-style: none;
 }
 
-`  
+`
 
 export const TopNav = styled.div`
 background-color: black;
@@ -63,7 +62,7 @@ div {
     display: none;
 }
 }
-`  
+`
 
 export const Navigation = styled.div`
 display: flex;
@@ -101,7 +100,7 @@ span {
     }
 }
 }
-`  
+`
 
 export const Menu = styled.div`
 color: black;
@@ -137,5 +136,5 @@ li:focus{
     display: block;
 }
 }
-`  
+`
 

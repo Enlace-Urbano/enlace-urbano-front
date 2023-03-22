@@ -3,20 +3,29 @@ import styled from "styled-components";
 export const InstagramCardStyle = styled.div`
 
 li {
-    margin: 3em;
-    background-color: #FAFAFA;
+    margin: 2em;
+    background-color: #e3eef681;
     padding: 1em;
-    color: #817F7F;
-    width: 322px;
-    height: 490px;
+    color: #424242;
+    width: 300px;
+    height: 460px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-radius: 5px;
 } 
 
+li:hover {
+    transition: 0.2s;
+    background-color:var(--color-lightblue);
+
+}
+
 img {
-    width: 280px;
+    width: 260px;
+    border-radius: 5px;
+    margin-top: 0;
 
 }
 
@@ -28,7 +37,8 @@ p {
     text-overflow: ellipsis;
     white-space: normal;
     font-size: 18px;
-    margin-left: 10px;
+    margin-left: 6px;
+    margin-bottom: 10px;
 }
 
 Button {
@@ -37,4 +47,6 @@ Button {
     margin-right: 20px;
     
 }
+
+
 `
