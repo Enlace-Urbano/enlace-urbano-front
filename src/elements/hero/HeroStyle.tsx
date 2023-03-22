@@ -6,6 +6,7 @@ display: flex;
 align-items: center;
 height: 100vh;
 position: relative;
+z-index: -1;
 
 
 
@@ -15,7 +16,6 @@ div {
     width: 70%;
     height: 100vh;
     margin-top: 35%;
-    z-index: -1;
 
 }
 h1{

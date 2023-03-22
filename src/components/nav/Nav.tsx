@@ -1,33 +1,30 @@
 import { Menu, Navigation, NavStyle } from './NavStyle'
 import { Link } from 'react-router-dom'
-import { BsLinkedin } from 'react-icons/bs';
-import { AiFillInstagram } from 'react-icons/ai';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import logoWhite from '../../assets/logoWhite.svg';
 import { Dropdown, NavButton } from '../../elements/index';
 import { useState, useRef, useEffect } from 'react';
-// import gsap from 'gsap'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 
 const Nav = () => {
 
-    // const hideNav = useRef(null);
-    // useEffect(() => {
-    //     const el = hideNav.current
-    //     gsap.fromTo(el, {
-    //         y: 0,
-    //         end: 99999,
-    //     }, {
-    //         y: -70,
-    //         duration: 0.5,
-    //         scrollTrigger: {
-    //             trigger: el,
-    //             toggleActions: "none play reverse play"
-    //         }
-    //     })
-    // }, [])
+    const hideNav = useRef(null);
+    useEffect(() => {
+        const el = hideNav.current
+        gsap.fromTo(el, {
+            y: 0
+        }, {
+            y: -70,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: el,
+                toggleActions: "none play reverse play"
+            }
+        })
+    }, [])
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -36,8 +33,7 @@ const Nav = () => {
     };
     return (
         <>
-            {/* <NavStyle ref={hideNav}> */}
-            <NavStyle>
+            <NavStyle ref={hideNav}>
                 <Navigation>
                     <Link to="/" ><img src={logoWhite} alt="Logo" /></Link>
 
@@ -56,8 +52,8 @@ const Nav = () => {
                             <NavButton label={'Contáctanos'} color={'#00B899'} />
                         </Link>
                     </div>
-                    <span><RxHamburgerMenu onClick={() => setIsDropdownOpen(!isDropdownOpen)} />
-
+                    <span>
+                        <RxHamburgerMenu onClick={() => setIsDropdownOpen(!isDropdownOpen)} />
                     </span>
                 </Navigation>
 
