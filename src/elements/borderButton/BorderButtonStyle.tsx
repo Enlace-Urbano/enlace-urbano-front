@@ -12,8 +12,6 @@ export const BorderButtonStyle =styled.button`
     
     &:hover {
     font-weight: bold;
-    border-radius: 15px;
-    border: 3px solid ;
     background-color: var(--color-green);
 
     

@@ -4,11 +4,10 @@ import styled from "styled-components";
 export const HeroStyle = styled.section`
 display: flex;
 align-items: center;
-height: 100vh;
 position: relative;
 z-index: -1;
-
-
+height: 100vh;
+width: 100vw;
 
 div {
     position: absolute;
@@ -27,8 +26,8 @@ h1{
 video {
     filter: brightness(0.5);
     z-index: -1;
-    width: 100%;
     height: 100vh;
+    width: 100%;
     object-fit: cover;
   
 
