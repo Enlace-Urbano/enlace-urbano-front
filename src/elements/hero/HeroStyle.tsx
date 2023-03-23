@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 
-export const HeroStyle = styled.section`
+export const HeroStyle = styled.div`
 display: flex;
 align-items: center;
 position: relative;
+height: 100dvh;
+width: 98.9dvw;
 z-index: -1;
-height: 100vh;
-width: 100vw;
 
 div {
     position: absolute;
@@ -25,7 +25,6 @@ h1{
 }
 video {
     filter: brightness(0.5);
-    z-index: -1;
     height: 100vh;
     width: 100%;
     object-fit: cover;
@@ -35,19 +34,16 @@ video {
 
 @media screen and (max-width: 800px) {
 height: 100vh;
-width: 100%;
+width: 98%;
 display: flex;
 justify-content: center;
 align-items: center;
 
 
 div {
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    height: 100dvh;
     margin-top: 30em;
-    padding: 2em;
-  
-
 }
 
 h1{ 
@@ -56,10 +52,8 @@ h1{
 }
 
 video {
-    height: 100%;
-    width:100%;
-    object-fit: cover;
-
+    height: 100dvh;
+    width:98vw;
 }
 }
 `

@@ -1,5 +1,4 @@
 import { HomeCardContainer, HomeCardStyle } from './HomeCardStyle'
-import pic1 from '../../assets/pic1.png'
 import { BorderButton } from '../index'
 
 interface CardProps {

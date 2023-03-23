@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HomeCardContainer=styled.div<{ align: string}>`
 display:flex;
 justify-content: ${props => props.align};
-width: 100dvw;
+width: 98.9dvw;
 margin: 0;
 
 
@@ -20,7 +20,11 @@ img{
 
 }
 
+@media screen and (max-width: 800px) {
+justify-content: center;
+width: 99%;
 
+}
  
 `
 export const HomeCardStyle = styled.div<{ color: string , lettercolor: string }>`
@@ -39,7 +43,6 @@ gap: 2em;
 &:hover{
     background-color: ${props => props.color};
     color: ${props => props.lettercolor};
-
 }
 
 
@@ -47,12 +50,24 @@ gap: 2em;
 h1{
     font-family: "Calistoga";
     font-size: 64px;
-
 }
+
 p{
     font-family: "Lato";
     font-size: 18px;
+}
+@media screen and (max-width: 800px) {
+align-items: center;
+text-align: center;
+width: 100%;
+}
 
+h1{
+    font-size: 32px;
+}
+
+p{
+    font-size: 18px;
 }
 
 `
