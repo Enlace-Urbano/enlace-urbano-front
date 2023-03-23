@@ -1,10 +1,9 @@
 import styled from "styled-components";
 
-export const HomeCardContainer=styled.div`
+export const HomeCardContainer = styled.div`
 width:100vw;
 display:flex;
 margin-top: 0 auto;
-
 
 img{
     width: 100%;
@@ -18,11 +17,8 @@ img{
     filter: brightness(1);
 
 }
-
-
- 
 `
-export const HomeCardStyle = styled.div<{ color: string , lettercolor: string }>`
+export const HomeCardStyle = styled.div<{ color: string, lettercolor: string }>`
 position: absolute;
 width: 50dvw;
 height:100vh;
@@ -38,20 +34,15 @@ gap: 2em;
 &:hover{
     background-color: ${props => props.color};
     color: ${props => props.lettercolor};
-
 }
-
-
 
 h1{
     font-family: "Calistoga";
     font-size: 64px;
-
 }
+
 p{
     font-family: "Lato";
     font-size: 18px;
-
 }
-
 `

@@ -16,19 +16,22 @@ ul {
   margin: 0;
 }
   
-  body {
-    background-color: var(--color-white);
+body {
+  background-color: var(--color-white);
+}
 
-  }
+main{
+  margin-top: 70px;
+}
 
-  :root {
-    --color-white: #FCFCFC;
-    --color-green: #0CB59A;
-    --color-lightgreen: #80DBCC;
-    --color-blue: #005493;
-    --color-highlights: #00C27A;
-    --color-black: #424242;
-    --color-lightblue: #E3EEF6;
 
-    }
+:root {
+  --color-white: #FCFCFC;
+  --color-green: #0CB59A;
+  --color-lightgreen: #80DBCC;
+  --color-blue: #005493;
+  --color-highlights: #00C27A;
+  --color-black: #424242;
+  --color-lightblue: #E3EEF6;
+}
     

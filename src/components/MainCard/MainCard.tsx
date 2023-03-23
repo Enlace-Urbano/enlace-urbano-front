@@ -1,27 +1,26 @@
-import { MainCardContainer, MainCardStyle} from './MainCardStyle'
-import  pic1  from '../../assets/pic1.png'
-import { BorderButton } from '../../elements/index'
+import { BgImage, MainCardStyle } from './MainCardStyle'
 
-interface CardProps  {
+interface CardProps {
     color: string
     h1label: string
-    plabel:string
-    lettercolor:string
-  }
+    plabel: string
+    lettercolor: string
+    direction: string
+    bgimage: string
+}
 
- const MainCard: React.FC<CardProps> = ({h1label, plabel, lettercolor , color }) => ( 
-   
-        <>
-        {/* <MainCardContainer>
-        <img src= {src} alt="foto" />
-        </MainCardContainer> */}
+const MainCard: React.FC<CardProps> = ({ h1label, plabel, lettercolor, color, direction, bgimage }) => (
+    <>
+        <MainCardStyle lettercolor={lettercolor} color={color} direction={direction}>
+            <div>
+                <h1>{h1label}</h1>
+                <p>{plabel}</p>
+            </div>
 
-        <MainCardStyle lettercolor={lettercolor} color={color} > 
-        <h1>{h1label}</h1>
-        <p>{plabel}</p>
+            <BgImage bgimage={bgimage}>
+            </BgImage>
         </MainCardStyle>
-        </>
-    )
-    
+    </>
+)
 
 export default MainCard
