@@ -6,7 +6,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 width: 100%;
-height:72vh;
+height:90vh;
 background-color: #fdfdfd;
 ;
 
