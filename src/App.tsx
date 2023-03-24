@@ -1,11 +1,10 @@
 import './App.css'
 import { Routes, Route } from 'react-router'
 import Login from './pages/login/Login'
-import { Home, About, Projects, Everyday, Services, Contact } from './pages/index'
+import { Home, About, Projects, Everyday, Services, Contact, Denounce } from './pages/index'
 import Layout from './pages/layout/Layout'
 
 function App() {
-
   return (
     <Routes>
       <Route element={<Layout />} >
@@ -15,11 +14,11 @@ function App() {
         <Route path="/nuestrodia" element={<Everyday />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/contactanos" element={<Contact />} />
+        <Route path="/denuncia" element={<Denounce />} />
       </Route>
-
       <Route path="/admin/login" element={<Login />} />
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;

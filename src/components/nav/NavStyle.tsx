@@ -73,7 +73,7 @@ margin: 0 20px;
 justify-content: space-between;
 img {
     height: 40px;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 span {

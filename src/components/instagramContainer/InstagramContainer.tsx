@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import InstagramCard from '../instagramCard/InstagramCard';
+import InstagramCard from '../InstagramCard/InstagramCard';
 import Title from '../../elements/title/Title';
 import { Container, InstagramContainerStyle } from './InstagramContainerStyle';
 
 
-type Props = {}
-
-
+type Props = {};
 
 const InstagramContainer = (props: Props) => {
 
@@ -20,4 +18,4 @@ const InstagramContainer = (props: Props) => {
   </>
   );
 };
-export default InstagramContainer
+export default InstagramContainer;

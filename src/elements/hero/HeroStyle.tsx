@@ -12,9 +12,9 @@ z-index: -1;
 div {
     position: absolute;
     padding: 1em;
-    width: 70%;
+    width: 80%;
     height: 100vh;
-    margin-top: 35%;
+    margin-top: 30%;
 
 }
 h1{

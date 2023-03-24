@@ -7,14 +7,14 @@ padding: 4em;
 
 `
 export const Container = styled.ul`
-
+width: 100%;
 display: flex;
-align-items: center;
+flex-wrap: wrap;
 justify-content: center;
-ul {
-    display: flex;
-    list-style: none;
-}
+align-items: center;
+padding: 0;
+margin: 0 auto;
+list-style: none;
 
 @media screen and (max-width: 768px) {
 display: flex;

@@ -6,6 +6,7 @@ import { Dropdown, NavButton } from '../../elements/index';
 import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 gsap.registerPlugin(ScrollTrigger);
 
 

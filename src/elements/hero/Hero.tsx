@@ -8,7 +8,7 @@ const Hero = () =>  {
     <HeroStyle>
         <video src={videoHero} autoPlay loop></video>
         <div>
-            <h1> Innovación social para una mejor habitabilidad y calidad de vida de las comunidades.</h1>
+            <h1> Creemos que cada comunidad tiene el potencial de ser un catalizador de transformación y desarrollo urbano. </h1>
         </div>
     </HeroStyle>    
     </>
