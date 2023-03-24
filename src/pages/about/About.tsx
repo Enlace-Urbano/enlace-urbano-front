@@ -3,6 +3,7 @@ import { AboutContainer } from "./AboutStyle"
 import portrait from '../../assets/portrait1.jpg'
 import group2 from '../../assets/group2.jpg'
 import hospicio from '../../assets/alto-hospicio2.jpg'
+import group4 from '../../assets/group4.jpg'
 import BlueCard from "../../components/blueCard/BlueCard"
 import React from "react"
 
@@ -22,9 +23,10 @@ const About = () => {
                 </React.Fragment>
             } />
 
-
             <h2>Nuestro Impacto</h2>
             <NumberCardContainer />
+
+            <MainCard color={"var(--color-white)"} h1label={"Visión"} plabel={"Hacer ciudad debe traducirse en un equilibrio entre la planificaciónestablecida y las necesidades locales. A través de un formato flexible, conenfoque ecológico basado en la confianza y la participación, buscamosvisibilizar, transformar e impulsar a las comunidades locales, para crearciudades sostenibles por medio de un proceso colaborativo"} lettercolor={"var(--color-black)"} direction={"row"} bgimage={group4} />
 
         </AboutContainer>
     )
