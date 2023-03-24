@@ -12,10 +12,10 @@ img{
     object-fit: cover;
     z-index: -1;
 }
+
 &:hover {
     transition: 0.2s;
     filter: brightness(1);
-
 }
 `
 export const HomeCardStyle = styled.div<{ color: string, lettercolor: string }>`

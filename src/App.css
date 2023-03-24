@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
@@ -22,6 +22,7 @@ body {
 
 main{
   margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 

@@ -15,54 +15,7 @@ ul {
     text-decoration: none;
     list-style: none;
 }
-
 `
-
-// export const TopNav = styled.div`
-// background-color: black;
-// display: flex;
-// flex-direction: row;
-// justify-content: flex-end;
-// align-items: center;
-// color: aliceblue;
-// width: 100%;
-// height: 50px;
-// div {
-//     display: block;
-//     margin-right: 1em;
-// }
-// a{
-//     svg {
-//         color: white;
-//         height: 35px;
-//         width: 35px;
-//         margin: 15px;
-       
-//     }
-//     text-decoration: none;
-//     list-style: none;
-// }
-// ul{
-//     display: flex;
-//     flex-direction: row;
-//     gap: 15px;
-//     justify-content: center;
-//     align-items: center;
-//     margin-right: 3em;
-// }
-
-// @media screen and (max-width: 768px) {
-// height: 61px;
-
-// ul {
-//     margin-right: 1em;
-// }
-
-// div {
-//     display: none;
-// }
-// }
-// `  
 
 export const Navigation = styled.div`
 display: flex;
@@ -134,8 +87,8 @@ li:focus{
         display: none;
     }
     .buttons {
-    display: block;
-}
+        display: block;
+    }
 }
 `
 
