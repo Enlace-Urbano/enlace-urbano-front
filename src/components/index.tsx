@@ -3,3 +3,4 @@ export { default as Form }  from './form/Form';
 export { default as NumberCardContainer }  from './numberCardContainer/NumberCardContainer';
 export { default as InstagramContainer } from './instagramContainer/InstagramContainer'
 export { default as MainCard }  from './MainCard/MainCard';
+export { default as AdminMenu}  from './AdminMenu/AdminMenu';
