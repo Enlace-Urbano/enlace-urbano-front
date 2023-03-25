@@ -6,6 +6,7 @@ import hospicio from '../../assets/alto-hospicio2.jpg'
 import group4 from '../../assets/group4.jpg'
 import BlueCard from "../../components/blueCard/BlueCard"
 import React from "react"
+import ActionCardContainer from "../../components/cardCarousel/CardCarousel"
 
 
 const About = () => {
@@ -23,10 +24,13 @@ const About = () => {
                 </React.Fragment>
             } />
 
-            <h2>Nuestro Impacto</h2>
+            <h2 className="title-section">Nuestro Impacto</h2>
             <NumberCardContainer />
 
             <MainCard color={"var(--color-white)"} h1label={"Visión"} plabel={"Hacer ciudad debe traducirse en un equilibrio entre la planificaciónestablecida y las necesidades locales. A través de un formato flexible, conenfoque ecológico basado en la confianza y la participación, buscamosvisibilizar, transformar e impulsar a las comunidades locales, para crearciudades sostenibles por medio de un proceso colaborativo"} lettercolor={"var(--color-black)"} direction={"row"} bgimage={group4} />
+
+            <h2 className="title-section">Acciones</h2>
+            <ActionCardContainer />
 
         </AboutContainer>
     )
