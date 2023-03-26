@@ -6,6 +6,7 @@ import Login from './pages/login/Login'
 import { FormEventHandler, useState } from 'react'
 import { authService } from './features/auth/services/auth.service'
 import AdminMain from './pages/admin-mainmenu/AdminMain'
+import Workers from './pages/admin-workersedit/Workers'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route path="/nosotros" element={<About />} />
       <Route path="/admin/login" element={<Login />} />
       <Route path="/admin/main" element={<AdminMain />} />
+      <Route path="/admin/workers" element={<Workers />} />
     </Routes>
   )
 }
