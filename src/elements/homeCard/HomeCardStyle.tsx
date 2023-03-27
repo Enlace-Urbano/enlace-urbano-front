@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HomeCardContainer = styled.div<{ align: string }>`
 display:flex;
 justify-content: ${props => props.align};
-width: 100vw;
+width: 100%;
 
 img{
     width: 100%;
