@@ -4,15 +4,14 @@ export const InstagramCardStyle = styled.div`
 width: 33.33%;
 
 li {
-    margin: 1em auto;
-    background-color: #e3eef681;
-    padding: 1em;
+    margin: 0 auto;
     color: #424242;
-    width: 400px;
-    height: 460px;
+    width: 340px;
+    height: 500px;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     border-radius: 5px;
 } 
@@ -40,6 +39,7 @@ p {
     font-size: 18px;
     margin-left: 6px;
     margin-bottom: 10px;
+    width: 300px;
 }
 
 Button {

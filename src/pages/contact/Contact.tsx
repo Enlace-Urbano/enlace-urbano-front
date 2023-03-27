@@ -4,8 +4,26 @@ import { IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
 import { Banner, Button, Input, Title } from "../../elements/index";
 import Textarea from "../../elements/textarea/Textarea";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 const Contact = () => {
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      if (form.current) {
+      emailjs.sendForm('service_xhgd2at', 'template_14pt2qq', form.current, 'wz3DnBPyrWrKO0bTF')
+        .then((result) => {
+            console.log(result.text);
+            alert('Su mensaje ah sido enviado');
+        }, (error) => {
+            console.log(error.text);
+            alert('Lo sentimos, ha habido un error. Vuela a intentarlo');
+        });
+    };
+}
     return (
         <>
             <Banner label={"Reconocemos el enlace indisoluble entre el individuo y su entorno, tanto físico como social."} label2={""}></Banner>
@@ -29,12 +47,12 @@ const Contact = () => {
                     </span>
 
                 </Info>
-                <ContactForm>
+                <ContactForm ref={form} onSubmit={sendEmail}>
                     <Title label={"Contáctanos"}></Title>
-                    <Input  placeholder='Nombre'/>     
-                    <Input  placeholder='Correo electrónico'/>
-               <Textarea placeholder={"Escribe aquí tu mensaje."}/>
-                    <Button label={"Enviar"}></Button>
+                    <Input type="text" name="user_name" placeholder='Nombre'/>     
+                    <Input  type="email" name="user_email" placeholder='Correo electrónico'/>
+               <Textarea name="message" placeholder={"Escribe aquí tu mensaje."}/>
+                    <Button type="submit" label={"Enviar"}></Button>
                 </ContactForm>
 
             </ContactStyle>

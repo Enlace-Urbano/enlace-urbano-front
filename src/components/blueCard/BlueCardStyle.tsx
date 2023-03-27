@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div<{ marginT: number, marginB: number, padding: number }>`
     width: 100%;
-    height: 30rem;
+    height: 100vh;
     margin-top: ${props => props.marginT}rem;
     margin-bottom: ${props => props.marginB}rem;
     padding: ${props => props.padding}rem;
