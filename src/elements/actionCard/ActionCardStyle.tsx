@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const ActionCardStyle = styled.div`
 min-width: 300px;
+height: 280px;
 
 h1{
     width: fit-content;
     font-size: 2.25rem;
     color: var(--color-white);
-    line-height: 4rem;
-    padding: .5rem;
+    line-height: 3.5rem;
 }
 
 h1 span{

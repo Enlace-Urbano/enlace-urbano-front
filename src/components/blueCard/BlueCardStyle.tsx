@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div<{ marginT: number, marginB: number, padding: number }>`
     width: 100%;
     height: 30rem;
-    padding: 5rem;
+    margin-top: ${props => props.marginT}rem;
+    margin-bottom: ${props => props.marginB}rem;
+    padding: ${props => props.padding}rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +27,7 @@ export const CardContainer = styled.div`
     }
 
     @media screen and (max-width: 768px){
-        height: 70vh;
+        height: 80vh;
         font-size: 2rem;
     }
 `

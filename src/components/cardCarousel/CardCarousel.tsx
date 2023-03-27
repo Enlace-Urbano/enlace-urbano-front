@@ -10,9 +10,8 @@ const CardCarousel = () => {
 
             <ActionCard title={'Diagnóstico Multidisciplinario'} subtitle={'Enfoque Mixto y Multiescalable'} paragraph={'Enfoque mixtoque conjuga análisiscuantitativo y cualitativo.Generación y clasificación de datos sociales'} />
 
-            <ActionCard title={'Diagnóstico Multidisciplinario'} subtitle={'Enfoque Mixto y Multiescalable'} paragraph={'Enfoque mixtoque conjuga análisiscuantitativo y cualitativo.Generación y clasificación de datos sociales'} />
+            <ActionCard title={'Estrategias Colaborativas'} subtitle={'Plan de acción'} paragraph={'Líneasde trabajo definidascon la comunidad.'} />
 
-            <ActionCard title={'Diagnóstico Multidisciplinario'} subtitle={'Enfoque Mixto y Multiescalable'} paragraph={'Enfoque mixtoque conjuga análisiscuantitativo y cualitativo.Generación y clasificación de datos sociales'} />
         </Carousel>
     )
 }
