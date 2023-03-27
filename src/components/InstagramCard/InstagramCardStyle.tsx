@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const InstagramCardStyle = styled.div`
+width: 33.33%;
 
 li {
-    margin: 2em;
+    margin: 1em auto;
     background-color: #e3eef681;
     padding: 1em;
     color: #424242;
-    width: 300px;
+    width: 400px;
     height: 460px;
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@ li:hover {
 }
 
 img {
-    width: 260px;
+    width: 300px;
     border-radius: 5px;
     margin-top: 0;
 

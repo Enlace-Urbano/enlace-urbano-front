@@ -1,39 +1,66 @@
 import styled from "styled-components";
-import hero from './../../assets/hero.png'
 
 
 export const HeroStyle = styled.section`
-margin: 160px 0  0 0;
-background-image: url(${hero});
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-height: 70vh;
-width: 100%;
 display: flex;
 align-items: center;
-box-shadow: inset 0px 4px 27px 333px rgba(0, 0, 0, 0.3);
+height: 100vh;
+position: relative;
+z-index: -1;
+
+
+
 div {
-    padding: 0.5em;
-    width: 50%;
+    position: absolute;
     padding: 1em;
+    width: 70%;
+    height: 100vh;
+    margin-top: 35%;
+
 }
 h1{
     margin-left: 1em;
     font-size: 64px;
     font-family: 'Calistoga';
-    color: #ffffff;
+    color: var(--color-white);
+}
+video {
+    filter: brightness(0.5);
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  
+
 }
 
 @media screen and (max-width: 800px) {
-height: 502px;
+height: 100vh;
+width: 100%;
+display: flex;
 justify-content: center;
-margin-top: 200px;
+align-items: center;
 
-h1{
-    margin: 0 auto;
+
+div {
+    width: 100%;
+    height: 100vh;
+    margin-top: 30em;
+    padding: 2em;
+  
+
+}
+
+h1{ 
     font-size: 32px;
     font-weight: bold;
+}
+
+video {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+
 }
 }
 `

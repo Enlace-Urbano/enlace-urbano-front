@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 position: fixed;
-background-color: white;
+background-color: #424242;
 top: 0;
 right: 0;
 font-size: 16px;
@@ -18,62 +18,62 @@ ul {
 
 `
 
-export const TopNav = styled.div`
-background-color: black;
-display: flex;
-flex-direction: row;
-justify-content: flex-end;
-align-items: center;
-color: aliceblue;
-width: 100%;
-height: 50px;
-div {
-    display: block;
-    margin-right: 1em;
-}
-a{
-    svg {
-        color: white;
-        height: 35px;
-        width: 35px;
-        margin: 15px;
+// export const TopNav = styled.div`
+// background-color: black;
+// display: flex;
+// flex-direction: row;
+// justify-content: flex-end;
+// align-items: center;
+// color: aliceblue;
+// width: 100%;
+// height: 50px;
+// div {
+//     display: block;
+//     margin-right: 1em;
+// }
+// a{
+//     svg {
+//         color: white;
+//         height: 35px;
+//         width: 35px;
+//         margin: 15px;
        
-    }
-    text-decoration: none;
-    list-style: none;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 3em;
-}
+//     }
+//     text-decoration: none;
+//     list-style: none;
+// }
+// ul{
+//     display: flex;
+//     flex-direction: row;
+//     gap: 15px;
+//     justify-content: center;
+//     align-items: center;
+//     margin-right: 3em;
+// }
 
-@media screen and (max-width: 768px) {
-height: 61px;
+// @media screen and (max-width: 768px) {
+// height: 61px;
 
-ul {
-    margin-right: 1em;
-}
+// ul {
+//     margin-right: 1em;
+// }
 
-div {
-    display: none;
-}
-}
-`
+// div {
+//     display: none;
+// }
+// }
+// `  
 
 export const Navigation = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
-width: 100%;
+width: 99%;
 margin: 0 20px;
 justify-content: space-between;
 img {
     height: 40px;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 span {
@@ -89,11 +89,12 @@ img {
 }
 .buttons {
     display: none;
+    
 }
 span {
     display: block;
     svg{
-        color: black;
+        color: #ffffff;
         width: 35px;
         height: 35px;
         margin: 40px
@@ -103,7 +104,7 @@ span {
 `
 
 export const Menu = styled.div`
-color: black;
+color: #ffffff;
 width: 100%;
 ul{
     padding: 10px;
