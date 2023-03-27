@@ -7,7 +7,7 @@ const Form = () =>  {
     <>
     <FormStyle>
         <FormContainer>
-     <Title label={'Contáctanos'}/>
+    
      <Input placeholder='Nombre'/>
      <Input placeholder='Email'/>
      <Input placeholder='Mensaje'/>

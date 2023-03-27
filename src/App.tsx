@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router";
 import Login from "./pages/login/Login";
 import AdminMain from './pages/admin-mainmenu/AdminMain'
 import Workers from './pages/admin-workersedit/Workers'
-import { Home, About, Projects, Everyday, Services, Contact, Layout } from './pages/index'
+import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/index'
 
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
         <Route path="/nuestrodia" element={<Everyday />} />
         <Route path="/servicios" element={<Services />} />
         <Route path="/contactanos" element={<Contact />} />
+        <Route path="/denuncia" element={<Denounce />} />
       </Route>
 
       <Route path="/admin/login" element={<Login />} />
