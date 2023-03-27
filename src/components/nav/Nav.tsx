@@ -15,18 +15,9 @@ const Nav = () => {
     const hideNav = useRef(null);
     useEffect(() => {
         const el = hideNav.current
-<<<<<<< HEAD
-        gsap.fromTo(
-            el, 
-            {
-            y: 0,
-            end: 99999,
-        },{
-=======
         gsap.fromTo(el, {
             y: 0
         }, {
->>>>>>> 11a28b171f22069b7f720b02c43a27ed4f3bb922
             y: -70,
             duration: 0.5,
             scrollTrigger: {
