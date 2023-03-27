@@ -4,4 +4,4 @@ export { default as Everyday }  from './everyday/Everyday';
 export { default as Home }  from './home/Home';
 export { default as Projects }  from './projects/Projects';
 export { default as Services }  from './services/Services';
-
+export { default as Layout }  from './layout/Layout';

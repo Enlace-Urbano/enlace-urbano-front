@@ -5,4 +5,6 @@ export { default as InstagramContainer } from './instagramContainer/InstagramCon
 export { default as MainCard } from './MainCard/MainCard';
 export { default as AsideNav } from './asideNav/AsideNav';
 export { default as Footer }  from './footer/Footer';
+export { default as AdminMenu }  from './adminMenu/AdminMenu';
+
 

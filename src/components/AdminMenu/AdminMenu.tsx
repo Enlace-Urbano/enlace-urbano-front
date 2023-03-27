@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 type Props = {}
 
-const adminMenu = (props: Props) => {
+const AdminMenu = (props: Props) => {
   return (
     <AdminMenuStyle>
         <p>Menu</p>
@@ -15,4 +15,4 @@ const adminMenu = (props: Props) => {
   )
 }
 
-export default adminMenu
+export default AdminMenu
