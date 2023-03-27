@@ -8,16 +8,13 @@ interface DropdownProps {
   onSelect: (value: string) => void;
 }
 
-
 const Dropdown = ({ options, onSelect }: DropdownProps) => {
-
   return (
     <>
       <DropdownStyle>
-
         <ul>
-          {options.map(({ label, value }) => (
-            <li>
+          {options.map(({ label, value }, index) => (
+            <li key={index}>
               <Link to={value} style={{ textDecoration: 'none', color: 'var(--color-black)' }} onClick={() => onSelect(value)}>
                 {label}
               </Link>
@@ -32,7 +29,7 @@ const Dropdown = ({ options, onSelect }: DropdownProps) => {
         </div>
       </DropdownStyle>
     </>
-  )
-}
-export default Dropdown
+  );
+};
 
+export default Dropdown;
