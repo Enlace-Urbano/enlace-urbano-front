@@ -5,8 +5,8 @@ export const HeroStyle = styled.div`
 display: flex;
 align-items: center;
 position: relative;
-height: 100dvh;
-width: 98.9dvw;
+width: 100%;
+height: 100vh;
 z-index: -1;
 
 div {
@@ -33,11 +33,11 @@ video {
 }
 
 @media screen and (max-width: 800px) {
-height: 100vh;
-width: 98%;
-display: flex;
-justify-content: center;
-align-items: center;
+    height: 100vh;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 div {

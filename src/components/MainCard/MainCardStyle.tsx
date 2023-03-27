@@ -1,34 +1,67 @@
 import styled from "styled-components";
 
-export const MainCardContainer=styled.div`
-width:100vw;
-display:flex;
-margin-top: 0 auto;
-
-img{
-    width: 50%;
-    height: 80vh;
-} 
-`
-export const MainCardStyle = styled.div<{ color: string , lettercolor: string }>`
+export const MainCardStyle = styled.div<{ color: string, lettercolor: string, direction: string, padding: number, marginT?: string, marginB?: string }>`
 background-color: ${props => props.color};
-width: 50dvw;
-height:80dvh;
 color: ${props => props.lettercolor};
-padding-left: 4em;
+width: 100%;
 display: flex;
-justify-content: center;
-flex-direction: column;
-z-index: -1;
-gap: 2em;
+flex-direction: ${props => props.direction};
+justify-items: space-between;
+align-items: center;
 
 h1{
     font-family: "Calistoga";
-    font-size: 64px;
+    font-size: 48px;
+    margin-bottom: 1.5rem;
 }
+
 p{
     font-family: "Lato";
     font-size: 18px;
-    width: 80%;
 }
+
+div:nth-of-type(1){
+    width: 50vw;
+    padding: ${props => props.padding}rem;
+    margin-top: ${props => props.marginT}rem;
+    margin-bottom: ${props => props.marginB}rem;
+}
+
+
+@media screen and (max-width: 768px){
+    flex-direction: column;
+    
+    
+    div:nth-of-type(1){
+        width: 100%;
+        height: 50vh;
+        padding: 10%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    h1{
+        font-size: 1.5rem;
+    }
+
+    p{
+        font-size: 16px;
+    }
+}
+`
+
+export const BgImage = styled.div<{ bgimage: string }>`
+    width: 50vw;
+    height: 55vw;
+    background-image: url(${props => props.bgimage});
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+        height: 70vh;
+    }
 `
