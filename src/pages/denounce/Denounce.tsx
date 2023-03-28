@@ -1,4 +1,4 @@
-import { Button, Title } from "../../elements"
+import { Button, Title } from "../../elements/Index"
 import Textarea from "../../elements/textarea/Textarea"
 import { DenounceForm, DenounceStyle, Info } from "./DenounceStyle"
 import React, { useRef } from 'react';

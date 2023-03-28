@@ -1,9 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
 import Login from "./pages/login/Login";
-import AdminMain from './pages/admin-mainmenu/AdminMain'
-import Workers from './pages/admin-workersedit/Workers'
-import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/index'
+import {Workers, AdminHome, LayoutAdmin, AdminProjects, Stadistics} from './admin/pages/index'
+import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/Index'
 
 
 function App() {
@@ -18,10 +17,13 @@ function App() {
         <Route path="/contactanos" element={<Contact />} />
         <Route path="/denuncia" element={<Denounce />} />
       </Route>
-
+      <Route element={<LayoutAdmin />} >
       <Route path="/admin/login" element={<Login />} />
-      <Route path="/admin/main" element={<AdminMain />} />
+      <Route path="/admin/home" element={<AdminHome />} />
       <Route path="/admin/workers" element={<Workers />} />
+      <Route path="/admin/stadistics" element={<Stadistics />} />
+      <Route path="/admin/projects" element={<AdminProjects />} />
+      </Route >
     </Routes>
   );
 }

@@ -1,4 +1,4 @@
-import { NumberCard } from "../../elements/index"
+import { NumberCard } from "../../elements/Index"
 import { Grid } from "./NumberCardContainerStyle"
 
 const NumberCardsContainer = () => {

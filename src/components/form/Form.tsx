@@ -1,4 +1,4 @@
-import { Button, Input, Title } from '../../elements/index'
+import { Button, Input, Title } from '../../elements/Index'
 import { FormContainer, FormStyle } from './FormStyle'
 
 const Form = () =>  {

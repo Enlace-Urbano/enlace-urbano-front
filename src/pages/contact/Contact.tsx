@@ -1,8 +1,8 @@
-import { Form } from "../../components/index"
+import { Form } from "../../components/Index"
 import { ContactForm, ContactStyle, Info } from "./ContactStyle"
 import { IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
-import { Banner, Button, Input, Title } from "../../elements/index";
+import { Banner, Button, Input, Title } from "../../elements/Index";
 import Textarea from "../../elements/textarea/Textarea";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';

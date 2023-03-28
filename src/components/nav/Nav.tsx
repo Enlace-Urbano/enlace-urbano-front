@@ -2,7 +2,7 @@ import { Menu, Navigation, NavStyle } from './NavStyle'
 import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from 'react-icons/rx';
 import logoWhite from '../../assets/logoWhite.svg';
-import { Dropdown, NavButton } from '../../elements/index';
+import { Dropdown, NavButton } from '../../elements/Index';
 import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
