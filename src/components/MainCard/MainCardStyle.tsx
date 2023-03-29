@@ -12,16 +12,18 @@ align-items: center;
 h1{
     font-family: "Calistoga";
     font-size: 48px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 3rem;
 }
 
 p{
     font-family: "Lato";
-    font-size: 18px;
+    font-size: 1.7rem;
 }
 
 div:nth-of-type(1){
     width: 50vw;
+    height: 50vh;
+    height: min-content;
     padding: ${props => props.padding}rem;
     margin-top: ${props => props.marginT}rem;
     margin-bottom: ${props => props.marginB}rem;
@@ -31,10 +33,9 @@ div:nth-of-type(1){
 @media screen and (max-width: 768px){
     flex-direction: column;
     
-    
     div:nth-of-type(1){
         width: 100%;
-        height: 50vh;
+        height: 70vh;
         padding: 10%;
         display: flex;
         flex-flow: column nowrap;
@@ -54,7 +55,7 @@ div:nth-of-type(1){
 
 export const BgImage = styled.div<{ bgimage: string }>`
     width: 50vw;
-    height: 55vw;
+    height: 50vw;
     background-image: url(${props => props.bgimage});
     background-size: cover;
     background-repeat: no-repeat;
