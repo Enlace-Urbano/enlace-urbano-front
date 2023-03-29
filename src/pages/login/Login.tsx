@@ -6,7 +6,6 @@ import { FormEventHandler, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { authService } from '../../features/auth/services/auth.service'
 
-
 interface LoginFormValues {
   username: string;
   password: string;
