@@ -17,9 +17,9 @@ function App() {
         <Route path="/contactanos" element={<Contact />} />
         <Route path="/denuncia" element={<Denounce />} />
       </Route>
-      <Route element={<LayoutAdmin />} >
       <Route path="/admin/login" element={<Login />} />
-      <Route path="/admin/home" element={<AdminHome />} />
+      <Route element={<LayoutAdmin />} >
+      <Route path="/admin" element={<AdminHome />} />
       <Route path="/admin/workers" element={<Workers />} />
       <Route path="/admin/stadistics" element={<Stadistics />} />
       <Route path="/admin/projects" element={<AdminProjects />} />
