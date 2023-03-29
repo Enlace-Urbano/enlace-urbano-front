@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { WorkersListStyle } from './WorkersListStyle';
+import { WorkersListStyle, WorkersName, WorkersUl } from './WorkersListStyle';
+import { Button } from '../../../elements/Index';
 
 interface Worker {
   name: string;
   role: string;
+  profession: string;
   image: Buffer;
 }
 
@@ -23,18 +25,22 @@ const WorkersList = ()=> {
   }, []);
   
   return (
+    <>
     <WorkersListStyle>
-      <h3>Workers</h3>
-      <ul>
+      <h3>Equipo de Enlace Urbano</h3>
+      <WorkersUl>
         {workers.map(worker => (
           <li key={worker.name}>
-            <h3>Nombre {worker.name}</h3>
-            <p>Rol  {worker.role}</p>
             <img src={`http://localhost:3000/api/v1/workers/${worker.name}/image`} alt={worker.name} />
+            <WorkersName>{worker.name}</WorkersName>
+            <h4>{worker.role}</h4>
+            <p>{worker.profession}</p>
           </li>
         ))}
-      </ul>
+      </WorkersUl>
+      <Button label={'Guardar cambios'}/> 
     </WorkersListStyle>
+    </>
   );
 }
 

@@ -17,8 +17,9 @@ export const WorkersForm = styled.form`
 border: 2px solid black;
 border-radius: 5px;
 display: flex;
-width: 30rem;
-height: 25rem;
+padding: 2rem;
+width: fit-content;
+height: fit-content;
 gap: 2rem;
 flex-direction: column;
 align-items: center;
