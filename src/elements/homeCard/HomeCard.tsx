@@ -1,5 +1,5 @@
 import { HomeCardContainer, HomeCardStyle } from './HomeCardStyle'
-import { BorderButton } from '../index'
+import { BorderButton } from '../Index'
 
 interface CardProps {
     color: string

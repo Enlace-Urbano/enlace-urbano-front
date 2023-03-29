@@ -1,4 +1,4 @@
-import { Button, Input, Title } from '../../elements'
+import { Button, Input, Title } from '../../elements/Index'
 import { LoginForm, LoginStyle } from '../login/LoginStyle'
 import login from '../../assets/login.png'
 import logoBlack from '../../assets/logoBlack.svg'

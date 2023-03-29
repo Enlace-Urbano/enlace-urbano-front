@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { IoLogoInstagram, IoLogoLinkedin, IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
 import logoBlack from '../../assets/logoBlack.svg';
-import { FooterBottom, FooterStyle } from "./FooterStyle";
+import { FooterBottom, FooterStyle, Social, SocialContainer } from "./FooterStyle";
+import { IoLogoLinkedin, IoLogoFacebook, IoMail,IoLogoVimeo } from "react-icons/io5";
+import { AiFillInstagram } from 'react-icons/ai'
 
 type Props = {};
 
@@ -11,26 +12,26 @@ const Footer = (props: Props) => {
     <>
       <FooterStyle>
         <span>
-          <Link to="/Involucrate">
-            <p>Involúcrate</p>
-          </Link>
-          <Link to="/Donate">
-            <p>Dona ahora</p>
-          </Link>
-          <div>
-            <Link to="/Linkedin">
-              <IoLogoLinkedin />
-            </Link>
-            <Link to="/Instagram">
-              <IoLogoInstagram />
-            </Link>
-          </div>
+          <Link to="/proyectos">Proyectos</Link>
+          <Link to="/servicios">Servicios</Link>
+          <Link to="/contactanos">Contáctanos</Link>
         </span>
         <span>
-          <Link to="/Team">Equipo</Link>
-          <Link to="/Nosotros">Nosotros</Link>
-          <Link to="/About">¿Qué hacemos?</Link>
-          <Link to="/Proyectos">Proyectos</Link>
+          <Link to="/nosotros">
+           Nosotros
+          </Link>
+          <Link to="/nuestrodia">
+            <p>Nuestro día a día</p>
+          </Link>
+          <Social>
+          <p>Sígenos en redes sociales</p>
+          <SocialContainer>
+          <a href="https://www.linkedin.com/company/enlace-urbano/"><IoLogoLinkedin /></a>
+                <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram /></a>
+                <a href="https://www.facebook.com/people/enlaceurbano/100086536375505/"><IoLogoFacebook /></a>
+                <a href="https://vimeo.com/enlaceurbano"><IoLogoVimeo /></a>
+          </SocialContainer>
+          </Social>
         </span>
         <span>
           <h3>Contacto</h3>

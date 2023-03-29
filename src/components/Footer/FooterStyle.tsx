@@ -32,15 +32,19 @@ span{
 
 span>div{
     display:flex;
-
+    gap: 1rem; 
 }
 
 svg {
-padding: 0.2em;
  width: 30px;
  height: 30px;
-
+ color: var(--color-white);
 }
+svg:hover {
+    transition: 0.2s;
+    color: #00B899;
+}
+
 @media only screen and (max-width: 600px) {
     grid-template-columns: 1fr;
    
@@ -92,4 +96,15 @@ p{
 margin: 2em;
 
 }
+`
+export const Social=styled.div`
+    display:flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-weight: bold;
+`   
+export const SocialContainer=styled.div`
+    display:flex;
+    gap: 1rem; 
+
 `

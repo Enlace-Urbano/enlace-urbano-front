@@ -1,5 +1,5 @@
 import {  HomeStyle } from './HomeStyle'
-import { Hero } from '../../elements/index'
+import { Hero } from '../../elements/Index'
 import quienes from '../../assets/quienes.png'
 import HomeCard from '../../elements/homeCard/HomeCard'
 

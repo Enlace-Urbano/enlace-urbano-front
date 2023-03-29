@@ -9,8 +9,6 @@ const AsideNav = () => {
             <AsideNavStyle>
                 <a href="https://www.linkedin.com/company/enlace-urbano/"><IoLogoLinkedin /></a>
                 <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram /></a>
-                <a href="https://www.facebook.com/people/enlaceurbano/100086536375505/"><IoLogoFacebook /></a>
-                <a href="https://vimeo.com/enlaceurbano"><IoLogoVimeo /></a>
             </AsideNavStyle>
         </>
     )

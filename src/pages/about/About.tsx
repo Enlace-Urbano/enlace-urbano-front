@@ -1,4 +1,4 @@
-import { MainCard, NumberCardContainer } from "../../components"
+import { MainCard, NumberCardContainer } from "../../components/Index"
 import { AboutContainer } from "./AboutStyle"
 import portrait from '../../assets/portrait1.jpg'
 import group2 from '../../assets/group2.jpg'
