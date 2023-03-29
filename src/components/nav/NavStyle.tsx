@@ -9,12 +9,6 @@ background-color: #424242;
 top: 0;
 right: 0;
 font-size: 16px;
-
-
-ul {
-    text-decoration: none;
-    list-style: none;
-}
 `
 
 export const Navigation = styled.div`
@@ -24,6 +18,7 @@ align-items: center;
 width: 99%;
 margin: 0 20px;
 justify-content: space-between;
+
 img {
     height: 40px;
     margin-left: 2em;
@@ -32,27 +27,37 @@ img {
 span {
     display: none;
 }
-@media screen and (max-width: 768px) {
-height: 80px;
-padding: 0.5em;
-align-items: center;
 
-img {
-    height: 35px;
-}
-.buttons {
-    display: none;
-    
-}
-span {
-    display: block;
-    svg{
-        color: #ffffff;
-        width: 35px;
-        height: 35px;
-        margin: 40px
+
+@media screen and (max-width: 990px) {
+    img{
+        margin: 0;
     }
 }
+
+@media screen and (max-width: 865px) {
+    height: 80px;
+    padding: 0.5em;
+    align-items: center;
+
+    img {
+        height: 35px;
+    }
+
+    .buttons {
+        display: none;
+        
+    }
+
+    span {
+        display: block;
+        svg{
+            color: #ffffff;
+            width: 35px;
+            height: 35px;
+            margin: 40px
+        }
+    }
 }
 `
 
@@ -70,6 +75,7 @@ ul{
     align-items: center;
     font-size: 18px;
 }
+
 li:hover {
     transition: 0.2s;
     color: #00B899;
@@ -82,7 +88,7 @@ li:focus{
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 865px) {
     ul {
         display: none;
     }

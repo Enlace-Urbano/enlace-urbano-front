@@ -11,21 +11,44 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Nav = () => {
+    const hideNav = useRef(null)
 
-    const hideNav = useRef(null);
     useEffect(() => {
-        const el = hideNav.current
-        gsap.fromTo(el, {
-            y: 0
-        }, {
-            y: -70,
-            duration: 0.5,
-            scrollTrigger: {
-                trigger: el,
-                toggleActions: "none play reverse play"
+        const el = hideNav.current;
+
+        gsap.fromTo(
+            el,
+            {
+                y: 0,
+            },
+            {
+                y: -70,
+                duration: 0.5,
+                scrollTrigger: {
+                    trigger: el,
+                    toggleActions: 'none play reverse play',
+                },
             }
-        })
-    }, [])
+        );
+
+        let prevScrollPosition = window.pageYOffset;
+
+        const handleScroll = () => {
+            const currentScrollPosition = window.pageYOffset;
+            if (prevScrollPosition > currentScrollPosition) {
+                gsap.to(el, { y: 0, duration: 0.5 });
+            } else {
+                gsap.to(el, { y: -70, duration: 0.5 });
+            }
+            prevScrollPosition = currentScrollPosition;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -65,9 +88,8 @@ const Nav = () => {
                             { label: 'Inicio', value: '/' },
                             { label: 'Nosotros', value: '/nosotros' },
                             { label: 'Proyectos', value: '/proyectos' },
+                            { label: 'Nuestro día a día', value: '/nuestrodia' },
                             { label: 'Servicios', value: '/servicios' },
-                            { label: '¿Qué hacemos?', value: '/nuestrodia' },
-                            { label: 'Contáctanos', value: '/contáctanos' },
                         ]}
                         onSelect={handleSelect}
                     />
