@@ -1,21 +1,23 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 
-const Workers= () => {
+const Workers = () => {
   const [name, setName] = useState('');
   const [role, setRole] = useState('');
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState<undefined | Blob>();
 
-  const handleSubmit = async (e:any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('name', name);
     formData.append('role', role);
-    formData.append('image', image);
+    if (image !== undefined)
+      formData.append('image', image);
     try {
       const res = await axios.post('http://localhost:3000/api/v1/workers/', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
+          'Authorization': 'Bearer ' + localStorage.getItem('token')
         },
       });
       console.log(res.data);
@@ -40,7 +42,7 @@ const Workers= () => {
         <br />
         <label>
           Image:
-          <input type="file" accept=".png" onChange={(e) => setImage(e.target.files[0])} />
+          <input type="file" accept=".png" onChange={(e) => setImage((e.target.files as FileList)[0])} />
         </label>
         <br />
         <button type="submit">Create</button>
