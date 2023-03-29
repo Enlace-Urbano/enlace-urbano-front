@@ -4,13 +4,13 @@ import { Carousel } from './CardCarouselStyle'
 const CardCarousel = () => {
     return (
         <Carousel>
-            <ActionCard title={'Enfoque Metodológico'} subtitle={'Modo Ecológico'} paragraph={'Mejorar la calidad de vida en nuestros territorios y comunidades, vinculando a todos los actores que lo pueden hacer posible.'} />
+            <ActionCard title={'Enfoque Metodológico'} subtitle={'Modo Ecológico'} paragraph={'Metodología flexible, comprensión del territorio y el individuo dentro de un ecosistema.'} />
 
-            <ActionCard title={'Radiografía del Territorio'} subtitle={'Técnico y Comunitario'} paragraph={'Levantamiento deinformación conenfoque técnico +observación +percepción de losvecinos.'} />
+            <ActionCard title={'Radiografía del Territorio'} subtitle={'Técnico y Comunitario'} paragraph={' Levantamiento de información con enfoque técnico + observación + percepción de los vecinos.'} />
 
-            <ActionCard title={'Diagnóstico Multidisciplinario'} subtitle={'Enfoque Mixto y Multiescalable'} paragraph={'Enfoque mixtoque conjuga análisiscuantitativo y cualitativo.Generación y clasificación de datos sociales'} />
+            <ActionCard title={'Diagnóstico Multidisciplinario'} subtitle={'Enfoque Mixto y Multiescalable'} paragraph={'Enfoque mixto que conjuga análisis cuantitativo y cualitativo. Generación y clasificación de datos sociales.'} />
 
-            <ActionCard title={'Estrategias Colaborativas'} subtitle={'Plan de acción'} paragraph={'Líneasde trabajo definidascon la comunidad.'} />
+            <ActionCard title={'Estrategias Colaborativas'} subtitle={'Plan de acción'} paragraph={'Líneasde trabajo definidas con la comunidad.'} />
 
         </Carousel>
     )
