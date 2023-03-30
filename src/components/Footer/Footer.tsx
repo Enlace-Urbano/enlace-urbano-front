@@ -14,15 +14,16 @@ const Footer = (props: Props) => {
         <span>
           <Link to="/proyectos">Proyectos</Link>
           <Link to="/servicios">Servicios</Link>
-          <Link to="/contactanos">Contáctanos</Link>
-        </span>
-        <span>
-          <Link to="/nosotros">
-           Nosotros
-          </Link>
           <Link to="/nuestrodia">
             <p>Nuestro día a día</p>
           </Link>
+          <Link to="/nosotros">
+            Nosotros
+          </Link>
+        </span>
+        <span>
+          <Link to="/contactanos">Contáctanos</Link>
+          <Link to="/canaletico">Canal ético</Link>
           <Social>
           <p>Sígenos en redes sociales</p>
           <SocialContainer>
@@ -41,8 +42,11 @@ const Footer = (props: Props) => {
           </div>
           <div>
             <IoMail />
-            <p>enlace@urbano.org</p>
+            <a>hola@enlace-urbano.org </a>
           </div>
+          <p>ENLACE URBANO ONG <br />
+            Carlos Antúnez 2025, Oficina 404.  <br />
+            Providencia, Región Metropolitana.</p>
         </span>
       </FooterStyle>
       <FooterBottom>
