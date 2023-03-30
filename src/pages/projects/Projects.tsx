@@ -1,6 +1,8 @@
+import { ProjectsList } from "../../admin/components"
+
 const Projects = () => {
     return (
-        <h1>Projects</h1>
+        <ProjectsList/>
     )
 
 }

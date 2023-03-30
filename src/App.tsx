@@ -1,8 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
 import Login from "./pages/login/Login";
-import {Workers, AdminHome, LayoutAdmin, AdminProjects, Stadistics} from './admin/pages/index'
-import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/Index'
+import {Workers, AdminHome, LayoutAdmin, AdminProjects, Stadistics } from './admin/pages/Index'
+import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/index'
 
 
 function App() {
