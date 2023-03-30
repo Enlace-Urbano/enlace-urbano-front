@@ -22,4 +22,8 @@ svg:hover {
     transition: 0.2s;
     color: #00B899;
 }
+@media screen and (max-width: 800px) {
+    bottom: 0;
+}
+
 `  

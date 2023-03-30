@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const HeroStyle = styled.div`
 display: flex;
 align-items: center;
+justify-content:center ;
 position: relative;
 width: 100%;
 height: 100vh;
@@ -12,9 +13,7 @@ z-index: -1;
 div {
     position: absolute;
     padding: 1em;
-    width: 80%;
-    height: 100vh;
-    margin-top: 30%;
+ 
 
 }
 h1{
@@ -34,7 +33,7 @@ video {
 
 @media screen and (max-width: 800px) {
     height: 100vh;
-    width: 98%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,8 +41,6 @@ video {
 
 div {
     width: 80%;
-    height: 100dvh;
-    margin-top: 30em;
 }
 
 h1{ 
@@ -53,7 +50,7 @@ h1{
 
 video {
     height: 100dvh;
-    width:98vw;
+    width:100vw;
 }
 }
 `
