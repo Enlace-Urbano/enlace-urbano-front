@@ -22,10 +22,12 @@ const Dropdown = ({ options, onSelect }: DropdownProps) => {
           ))}
         </ul>
 
-        <Line />
-        <div>
-          <a href="https://www.linkedin.com/company/enlace-urbano/"><BsLinkedin /></a>
-          <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram /></a>
+        <div className="svg-container">
+          <Line />
+          <div>
+            <a href="https://www.linkedin.com/company/enlace-urbano/"><BsLinkedin /></a>
+            <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram /></a>
+          </div>
         </div>
       </DropdownStyle>
     </>

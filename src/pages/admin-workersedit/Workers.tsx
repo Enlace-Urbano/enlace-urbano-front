@@ -20,7 +20,7 @@ const Workers = () => {
           'Authorization': 'Bearer ' + localStorage.getItem('token')
         },
       });
-      console.log(res.data);
+
     } catch (error) {
       console.log(error);
     }
