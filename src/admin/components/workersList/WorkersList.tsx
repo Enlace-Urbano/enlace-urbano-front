@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { WorkersListStyle, WorkersName, WorkersUl } from './WorkersListStyle';
 import { Button } from '../../../elements/Index';
+import { getWorkersRequest } from '../../../apiServices/workersServices';
 
 interface Worker {
   name: string;
@@ -14,7 +14,7 @@ const WorkersList = ()=> {
   const [workers, setWorkers] = useState<Worker[]>([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/v1/workers/')
+    getWorkersRequest()
       .then(response => {
         setWorkers(response.data);
         console.log(response.data);

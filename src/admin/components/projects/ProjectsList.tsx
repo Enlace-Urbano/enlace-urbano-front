@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 import { ProjectsListStyle  } from './ProjectsListStyle';
 import { Button } from '../../../elements/Index';
+import { getProjectRequest } from '../../../apiServices/proyectsServices';
 
 interface Project {
   title: string;
@@ -13,7 +13,7 @@ const ProjectsList = ()=> {
   const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/v1/projects/')
+    getProjectRequest()
       .then(response => {
         setProjects(response.data);
         console.log(response.data);
