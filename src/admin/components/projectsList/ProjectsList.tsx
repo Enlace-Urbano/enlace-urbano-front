@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ProjectsListStyle  } from './ProjectsListStyle';
-import { Button } from '../../../elements/Index';
+import { ProjectsCard, ProjectsListStyle, TextContainer  } from './ProjectsListStyle';
 
 interface Project {
   title: string;
@@ -26,18 +25,16 @@ const ProjectsList = ()=> {
   return (
     <>
     <ProjectsListStyle>
-      <h3>Equipo de Enlace Urbano</h3>
-      <ul>
         {projects.map(project => (
-          <li key={project.title}>
+          <ProjectsCard key={project.title}>
             <img src={`http://localhost:3000/api/v1/projects/${project.title}/image`} alt={project.title} />
+            <TextContainer>
             <h1>{project.title}</h1>
-            <h4>{project.description}</h4>
-            
-          </li>
+            <p>{project.description}</p> 
+            </TextContainer>
+          </ProjectsCard>
         ))}
-      </ul>
-      <Button label={'Guardar cambios'}/> 
+  
     </ProjectsListStyle>
     </>
   );
