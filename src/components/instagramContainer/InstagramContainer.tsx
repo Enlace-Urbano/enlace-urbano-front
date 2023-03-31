@@ -1,4 +1,4 @@
-import InstagramCard from "../InstagramCard/InstagramCard";
+import InstagramCard from "../instagramCard/InstagramCard";
 import { Container, InstagramContainerStyle } from "./InstagramContainerStyle";
 
 type Props = {};

@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const NavStyle = styled.nav`
+width: 100%;
 display: flex;
 flex-direction: column;
-width: 100%;
 position: fixed;
 background-color: #424242;
 top: 0;
-right: 0;
 font-size: 16px;
+z-index: 2;
 `
 
 export const Navigation = styled.div`
 display: flex;
 flex-direction: row;
 align-items: center;
-width: 99%;
+width: 100%;
 margin: 0 20px;
 justify-content: space-between;
 
@@ -36,7 +36,7 @@ span {
 }
 
 @media screen and (max-width: 865px) {
-    height: 80px;
+    height: 70px;
     padding: 0.5em;
     align-items: center;
 
@@ -62,8 +62,9 @@ span {
 `
 
 export const Menu = styled.div`
-color: #ffffff;
 width: 100%;
+color: #ffffff;
+
 ul{
     padding: 10px;
     height: 70px;

@@ -1,15 +1,18 @@
-import { BorderButtonStyle} from './BorderButtonStyle'
+import { BorderButtonStyle } from './BorderButtonStyle'
 
-interface ButtonProps  {
+interface ButtonProps {
     label: string;
-  }
+    color: string;
+    bgcolor: string;
+}
 
- const BorderButton: React.FC<ButtonProps> = ({ label }) => ( 
-   
+const BorderButton: React.FC<ButtonProps> = ({ label, color, bgcolor }) => {
+    return (
         <>
-        <BorderButtonStyle > {label} </BorderButtonStyle>
+            <BorderButtonStyle color={color} bgcolor={bgcolor}>
+                {label}
+            </BorderButtonStyle>
         </>
     )
-    
-
+}
 export default BorderButton

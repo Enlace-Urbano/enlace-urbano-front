@@ -1,27 +1,62 @@
 import { HomeCardContainer, HomeCardStyle } from './HomeCardStyle'
 import { BorderButton } from '../Index'
+import { useEffect, useRef } from 'react'
+import gsap from 'gsap';
 
 interface CardProps {
     color: string
+    bgcolor: string
     h1label: string
     plabel: string
-    lettercolor: string
     img: string
-    align: string 
+    align: string
 }
 
-const HomeCard: React.FC<CardProps> = ({ h1label, plabel, lettercolor, color, img, align }) => (
-    <>
-        <HomeCardContainer align={align}>
+const HomeCard: React.FC<CardProps> = ({ h1label, plabel, color, bgcolor, img, align }) => {
 
-            <HomeCardStyle lettercolor={lettercolor} color={color} >
-                <h1>{h1label}</h1>
-                <p>{plabel}</p>
-                <BorderButton label={'Ver más'} />
-            </HomeCardStyle>
-            <img src={img} alt="foto" />
-        </HomeCardContainer>
-    </>
-)
+    const handleHover = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const el = handleHover.current;
+
+        const handleMouseEnter = () => {
+            gsap.to('.bg-container', {
+                height: '100vh',
+                duration: 1,
+                ease: 'power3.inOut'
+            })
+        }
+
+        const handleMouseLeave = () => {
+            gsap.to('.bg-container', {
+                height: '0',
+                duration: 1,
+                ease: 'power3.inOut'
+            })
+        }
+
+        el?.addEventListener('mouseenter', handleMouseEnter)
+        el?.addEventListener('mouseleave', handleMouseLeave)
+
+        return () => {
+            el?.removeEventListener('mouseenter', handleMouseEnter)
+            el?.removeEventListener('mouseleave', handleMouseLeave)
+        }
+    }, [])
+
+    return (
+        <>
+            <HomeCardContainer align={align}>
+                <HomeCardStyle ref={handleHover} color={color} bgcolor={bgcolor} >
+                    <h1>{h1label}</h1>
+                    <p>{plabel}</p>
+                    <BorderButton label={'Ver más'} color={'var(--color-white)'} bgcolor={'transparent'} />
+                    <div className="bg-container"></div>
+                </HomeCardStyle>
+                <img src={img} alt="foto" />
+            </HomeCardContainer>
+        </>
+    )
+}
 
 export default HomeCard
