@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import axios from 'axios';
+import { postProjectRequest } from '../../../apiServices/proyectsServices';
 import { AdminProjectsStyle } from './AdminProjectsStyle';
 import { Button, Title } from '../../../elements/Index';
 import { ProjectsList } from '../../components/index';
@@ -17,13 +17,9 @@ const Projects = () => {
     if (image !== undefined)
     formData.append('image', image);
     try {
-      const res = await axios.post('http://localhost:3000/api/v1/projects/', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      console.log(res.data);
-    } catch (error) {
+      const res = postProjectRequest(formData)
+      }
+     catch (error) {
       console.log(error);
     }
   };

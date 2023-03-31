@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import axios from 'axios';
+import { postWorkersRequest } from '../../../apiServices/workersServices';
 import { InputWorker, WorkersForm, WorkersListContainer, WorkersStyle } from './WorkersStyle';
 import { Button, Title } from '../../../elements/Index';
 import { WorkersList } from '../../components/index';
+import { useState } from 'react';
 
 const Workers = () => {
   const [name, setName] = useState('');
@@ -19,13 +19,9 @@ const Workers = () => {
     if (image !== undefined)
     formData.append('image', image);
     try {
-      const res = await axios.post('http://localhost:3000/api/v1/workers/', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-      });
-      console.log(res.data);
-    } catch (error) {
+      const res = postWorkersRequest(formData)
+      }
+     catch (error) {
       console.log(error);
     }
   };
