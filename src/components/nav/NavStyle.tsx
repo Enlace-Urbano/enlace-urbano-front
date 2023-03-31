@@ -8,7 +8,7 @@ position: fixed;
 background-color: #424242;
 top: 0;
 font-size: 16px;
-z-index: 2;
+z-index: 3;
 `
 
 export const Navigation = styled.div`

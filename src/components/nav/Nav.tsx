@@ -29,9 +29,16 @@ const Nav = () => {
         const handleScroll = () => {
             const currentScrollPosition = window.pageYOffset;
             if (prevScrollPosition > currentScrollPosition) {
-                gsap.to(el, { y: 0, duration: 0.5 });
+                gsap.to(el, {
+                    y: 0,
+                    duration: 0.5
+                })
             } else {
-                gsap.to(el, { y: -70, duration: 0.5 });
+                gsap.to(el, {
+                    y: -70,
+                    duration: 0.5,
+                    delay: .3,
+                })
             }
             prevScrollPosition = currentScrollPosition;
         }

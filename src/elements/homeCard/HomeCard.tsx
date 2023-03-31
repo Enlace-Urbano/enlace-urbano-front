@@ -14,25 +14,26 @@ interface CardProps {
 
 const HomeCard: React.FC<CardProps> = ({ h1label, plabel, color, bgcolor, img, align }) => {
 
-    const handleHover = useRef<HTMLDivElement>(null);
-
+    const handleMouse = useRef<HTMLDivElement>(null)
     useEffect(() => {
-        const el = handleHover.current;
+        const el = handleMouse.current;
 
         const handleMouseEnter = () => {
-            gsap.to('.bg-container', {
-                height: '100vh',
-                duration: 1,
-                ease: 'power3.inOut'
-            })
+            if (el !== null)
+                gsap.to(el.querySelector('.bg-container'), {
+                    height: '100vh',
+                    duration: 1,
+                    ease: 'power3.inOut'
+                })
         }
 
         const handleMouseLeave = () => {
-            gsap.to('.bg-container', {
-                height: '0',
-                duration: 1,
-                ease: 'power3.inOut'
-            })
+            if (el !== null)
+                gsap.to(el.querySelector('.bg-container'), {
+                    height: '0',
+                    duration: 1,
+                    ease: 'power3.inOut'
+                })
         }
 
         el?.addEventListener('mouseenter', handleMouseEnter)
@@ -47,7 +48,7 @@ const HomeCard: React.FC<CardProps> = ({ h1label, plabel, color, bgcolor, img, a
     return (
         <>
             <HomeCardContainer align={align}>
-                <HomeCardStyle ref={handleHover} color={color} bgcolor={bgcolor} >
+                <HomeCardStyle ref={handleMouse} color={color} bgcolor={bgcolor} >
                     <h1>{h1label}</h1>
                     <p>{plabel}</p>
                     <BorderButton label={'Ver más'} color={'var(--color-white)'} bgcolor={'transparent'} />
