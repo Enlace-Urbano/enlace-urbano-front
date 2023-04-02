@@ -9,52 +9,51 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Nav = () => {
     const hideNav = useRef(null)
-
     useEffect(() => {
-        const el = hideNav.current;
-
-        gsap.fromTo(
-            el,
-            {
-                y: 0,
+        const el = hideNav.current
+        gsap.fromTo(el, {
+            y: 0,
+        }, {
+            y: -70,
+            duration: 0.5,
+            scrollTrigger: {
+                trigger: el,
+                toggleActions: 'none play reverse play',
             },
-            {
-                y: -70,
-                duration: 0.5,
-                scrollTrigger: {
-                    trigger: el,
-                    toggleActions: 'none play reverse play',
-                },
-            }
-        );
+        })
 
         let prevScrollPosition = window.pageYOffset;
 
         const handleScroll = () => {
             const currentScrollPosition = window.pageYOffset;
             if (prevScrollPosition > currentScrollPosition) {
-                gsap.to(el, { y: 0, duration: 0.5 });
+                gsap.to(el, {
+                    y: 0,
+                    duration: 0.5
+                })
             } else {
-                gsap.to(el, { y: -70, duration: 0.5 });
+                gsap.to(el, {
+                    y: -70,
+                    duration: 0.5,
+                    delay: .3,
+                })
             }
             prevScrollPosition = currentScrollPosition;
-        };
+        }
 
         window.addEventListener('scroll', handleScroll);
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
+        }
+    }, [])
 
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
     const handleSelect = (value: string) => {
-        setIsDropdownOpen(false);
-    };
+        setIsDropdownOpen(false)
+    }
+
     return (
         <>
             <NavStyle ref={hideNav}>
@@ -81,7 +80,6 @@ const Nav = () => {
                     </span>
                 </Navigation>
 
-
                 {isDropdownOpen && (
                     <Dropdown
                         options={[
@@ -97,6 +95,5 @@ const Nav = () => {
             </NavStyle>
         </>
     )
-
 }
 export default Nav
