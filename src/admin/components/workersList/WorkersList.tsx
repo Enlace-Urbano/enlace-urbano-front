@@ -48,7 +48,6 @@ const WorkersList = ()=> {
           </li>
         ))}
       </WorkersUl>
-      <Button label={'Guardar cambios'}/> 
     </WorkersListStyle>
     </>
   );

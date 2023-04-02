@@ -17,7 +17,7 @@ h1{
 
 p{
     font-family: "Lato";
-    font-size: 1.3rem;
+    font-size: 1.7rem;
 }
 
 div:nth-of-type(1){
