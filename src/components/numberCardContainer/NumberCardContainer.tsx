@@ -1,23 +1,54 @@
-import { NumberCard } from "../../elements/Index"
-import { Grid } from "./NumberCardContainerStyle"
+import { NumberCard } from "../../elements/Index";
+import { Grid } from "./NumberCardContainerStyle";
+import { getstatisticsRequest } from "../../../src/apiServices/statisticsServices";
+import { useState, useEffect } from "react";
 
-const NumberCardsContainer = () => {
-
-    return (
-        <>
-            <Grid>
-                <div className="card1">
-                    <NumberCard label={'Familias ayudadas'} number={9270} color={'#025393'} />
-                </div>
-                <div className="card2">
-                    <NumberCard label={'Regiones'} number={7} color={'#80DBCC'} />
-                </div>
-                <div className="card3">
-                    <NumberCard label={'Comunidades alcanzadas en todo el territorio'} number={53} color={'#00B899'} />
-                </div>
-            </Grid>
-        </>
-    )
+interface Statistic {
+  register: string;
+  value: number;
 }
+const NumberCardsContainer = () => {
+  const [statistic, setStatistic] = useState<Statistic[]>([]);
+  useEffect(() => {
+    getstatisticsRequest()
+      .then((response) => {
+        setStatistic(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
-export default NumberCardsContainer
+  return (
+    <>
+      <Grid >
+        <div className="card1">
+          <NumberCard
+            label={'Proyectos'}
+            number={statistic.length > 0 ? statistic[0].value : 0}
+            color={"#025393"}
+          />
+        </div>
+        <div  className="card2">
+          <NumberCard 
+            label={'Comunidades'}
+            number={statistic.length > 0 ? statistic[1].value : 0}
+           color={"#80DBCC"} />
+        </div>
+        <div className="card3">
+          <NumberCard 
+             label={'Regiones'}
+             number={statistic.length > 0 ? statistic[2].value : 0}
+            color={"#00B899"}
+          />
+        </div>
+      </Grid>
+ 
+    </>
+  );
+};
+
+export default NumberCardsContainer;
+
+

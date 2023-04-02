@@ -1,4 +1,4 @@
-import { Form } from "../../components/Index"
+import { Form } from "../../components/index"
 import { ContactForm, ContactStyle, Info } from "./ContactStyle"
 import { IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
@@ -6,6 +6,7 @@ import { Banner, Button, Input, Title } from "../../elements/Index";
 import Textarea from "../../elements/textarea/Textarea";
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import TextArea from "../../elements/textarea/Textarea";
 
 
 const Contact = () => {
@@ -51,7 +52,7 @@ const Contact = () => {
                     <Title label={"Contáctanos"}></Title>
                     <Input type="text" name="user_name" placeholder='Nombre'/>     
                     <Input  type="email" name="user_email" placeholder='Correo electrónico'/>
-               <Textarea name="message" placeholder={"Escribe aquí tu mensaje."}/>
+               <TextArea name="message" placeholder={"Escribe aquí tu mensaje."}/>
                     <Button type="submit" label={"Enviar"}></Button>
                 </ContactForm>
 

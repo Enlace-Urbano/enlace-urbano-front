@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StadisticsStyle = styled.section` 
+export const StatisticsStyle = styled.section` 
 position: absolute;
 display: flex;
 flex-direction: column;
@@ -23,7 +23,7 @@ font-weight: bold;
 }
 
 `
-export const StadisticsContainer = styled.div`
+export const StatisticsContainer = styled.div`
 p {
     margin-bottom: 1rem;
 }

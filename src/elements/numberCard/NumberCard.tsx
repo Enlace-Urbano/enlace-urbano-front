@@ -1,4 +1,4 @@
-import { CardContainer, NumberCardStyle } from './NumberCardStyle'
+import { Card, NumberCardStyle } from './NumberCardStyle'
 
 interface NumberCardProps {
   label: string;
@@ -8,13 +8,15 @@ interface NumberCardProps {
 
 const NumberCard: React.FC<NumberCardProps> = ({ label, number, color = 'black' }) => (
   <>
-    <NumberCardStyle color={color} >
-      <CardContainer color={color}>
+    <NumberCardStyle color={color}>
+      <Card>
         <h1>{number} </h1>
         <h3>{label} </h3>
-      </CardContainer>
+      </Card>
 
     </NumberCardStyle>
   </>
 )
 export default NumberCard
+
+
