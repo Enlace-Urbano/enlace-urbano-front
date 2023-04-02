@@ -5,10 +5,12 @@ interface ButtonProps  {
     type?: string;
   }
 
+ const refresh = () => window.location.reload()
+
  const Button: React.FC<ButtonProps> = ({ label, type }) => ( 
    
         <>
-        <ButtonStyle> {label} </ButtonStyle>
+        <ButtonStyle onClick={refresh}> {label} </ButtonStyle>
         </>
     )
     
