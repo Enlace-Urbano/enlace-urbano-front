@@ -8,7 +8,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
 const TextArea: React.FC<Props> = ({ placeholder, name}) => {
     return (
         <>
-            <TextareaStyle name={name} placeholder={placeholder}>
+            <TextareaStyle required name={name} placeholder={placeholder}>
               
             </TextareaStyle>
         

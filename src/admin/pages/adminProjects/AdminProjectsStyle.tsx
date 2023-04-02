@@ -35,7 +35,6 @@ export const InputProject = styled.input`
 width: 20rem;
 height: 60px;
 border: none;
-
 border-bottom: 2px solid var(--color-highlights);
 outline: transparent;
 font-weight: 400;
