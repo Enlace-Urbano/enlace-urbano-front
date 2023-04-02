@@ -12,6 +12,5 @@ export const authService = {
     },
     register(user: User) {
         return axios.post(this.baseUrl.concat('users/register'), user)
-
     }
 }

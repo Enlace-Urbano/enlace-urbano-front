@@ -8,7 +8,6 @@ import iquique from '../../assets/iquique.jpg'
 
 
 const Home = () => {
-
     return (
         <>
             <HomeStyle>
