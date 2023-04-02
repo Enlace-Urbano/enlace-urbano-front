@@ -12,7 +12,6 @@ interface LoginFormValues {
 }
 
 const Login = () => {
-
   const navigate = useNavigate()
   const [loggedInUser, setLoggedInUser] = useState<string | null>(null)
 
@@ -36,7 +35,6 @@ const Login = () => {
       console.log(error)
     }
   }
-
 
   return (
     <>
