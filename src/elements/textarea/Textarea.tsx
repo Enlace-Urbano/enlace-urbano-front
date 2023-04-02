@@ -3,11 +3,12 @@ import { TextareaStyle } from "./TextareaStyle"
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
     placeholder: string;
+    name: string;
   }
-const Denounce: React.FC<Props> = ({ placeholder}) => {
+const TextArea: React.FC<Props> = ({ placeholder, name}) => {
     return (
         <>
-            <TextareaStyle placeholder={placeholder}>
+            <TextareaStyle name={name} placeholder={placeholder}>
               
             </TextareaStyle>
         
@@ -15,4 +16,4 @@ const Denounce: React.FC<Props> = ({ placeholder}) => {
     )
 
 }
-export default Denounce
+export default TextArea

@@ -17,7 +17,7 @@ background-color: ${props => props.color};
     height: 194px;
 }
 `
-export const CardContainer = styled.div<{ color: string }>`
+export const Card = styled.div`
 color: white ;
 
 h1 {

@@ -14,3 +14,16 @@ export const postWorkersRequest = async (formData:FormData)=>{
     }
     )
  }
+
+ export const deleteWorkersRequest = async (name: string) => {
+    try {
+      const response = await axios.delete(`${baseWorkersUrl}${name}`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+      return response;
+    } catch (error) {
+      throw new Error();
+    }
+  };

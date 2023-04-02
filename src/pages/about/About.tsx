@@ -1,4 +1,4 @@
-import { MainCard, NumberCardContainer } from "../../components/Index"
+import { MainCard, NumberCardContainer } from "../../components/index"
 import { AboutContainer } from "./AboutStyle"
 import portrait from '../../assets/portrait1.jpg'
 import group2 from '../../assets/group2.jpg'
@@ -7,7 +7,7 @@ import group4 from '../../assets/group4.jpg'
 import BlueCard from "../../components/blueCard/BlueCard"
 import React from "react"
 import ActionCardContainer from "../../components/cardCarousel/CardCarousel"
-import { Banner } from "../../elements"
+import { Banner } from "../../elements/Index"
 
 
 const About = () => {
