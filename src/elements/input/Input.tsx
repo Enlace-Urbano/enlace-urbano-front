@@ -6,10 +6,10 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 
-const Input: React.FC<InputProps> = ({ placeholder, type, value, name }) => {
+const Input: React.FC<InputProps> = ({ placeholder, type, value, name, required}) => {
   return (
     <>
-      <InputStyle placeholder={placeholder} type={type} value={value} name={name} />
+      <InputStyle placeholder={placeholder} type={type} value={value} name={name} required/>
     </>
   )
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ProjectsCard, ProjectsListStyle, TextContainer  } from './ProjectsListStyle';
-import { getProjectRequest } from '../../../apiServices/proyectsServices';
+import { baseProjectsUrl, getProjectRequest } from '../../../apiServices/proyectsServices';
 
 interface Project {
   title: string;
@@ -15,7 +15,6 @@ const ProjectsList = ()=> {
     getProjectRequest()
       .then(response => {
         setProjects(response.data);
-        console.log(response.data);
       })
       .catch(error => {
         console.error(error);
@@ -27,7 +26,7 @@ const ProjectsList = ()=> {
     <ProjectsListStyle>
         {projects.map(project => (
           <ProjectsCard key={project.title}>
-            <img src={`http://localhost:3000/api/v1/projects/${project.title}/image`} alt={project.title} />
+            <img src={`${baseProjectsUrl}${project.title}/image`} alt={project.title} />
             <TextContainer>
             <h1>{project.title}</h1>
             <p>{project.description}</p> 
