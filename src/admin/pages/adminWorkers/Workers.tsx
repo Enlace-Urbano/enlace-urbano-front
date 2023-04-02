@@ -26,6 +26,8 @@ const Workers = () => {
     }
   };
 
+  
+
   return (
     <WorkersStyle>
       <Title label={'Crea un nuevo integrante'} />

@@ -3,6 +3,7 @@ import Textarea from "../../elements/textarea/Textarea"
 import { DenounceForm, DenounceStyle, Info } from "./DenounceStyle"
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import TextArea from "../../elements/textarea/Textarea";
 
 
 const Denounce = () => {
@@ -34,7 +35,7 @@ const Denounce = () => {
                 </Info>
                 <DenounceForm  ref={form} onSubmit={sendEmail}>
                     <Title label={"Denuncia"}></Title>
-               <Textarea name="message"  placeholder={"Escribe aquí tu denuncia anónima y confidencial."}/>
+               <TextArea name="message" placeholder={"Escribe aquí tu denuncia anónima y confidencial."}/>
                     <Button type="submit" label={"Enviar"}></Button>
                 </DenounceForm>
             </DenounceStyle>
