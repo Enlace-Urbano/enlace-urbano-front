@@ -1,6 +1,6 @@
 import { postWorkersRequest } from '../../../apiServices/workersServices';
 import { InputWorker, WorkersForm, WorkersListContainer, WorkersStyle } from './WorkersStyle';
-import { Button, Title } from '../../../elements/Index';
+import { Button, Title } from '../../../elements/index';
 import { WorkersList } from '../../components/index';
 import { useState } from 'react';
 
