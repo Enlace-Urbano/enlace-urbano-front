@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { postProjectRequest } from '../../../apiServices/projectsServices';
 import { AdminForm, AdminProjectsStyle, EditProjects, InputProject } from './AdminProjectsStyle';
 import { Button, Input, Title } from '../../../elements/index';
-import { ProjectsList } from '../../components/index';
+import { ProjectsListAdmin } from '../../components/index';
 import TextArea from '../../../elements/textarea/Textarea';
 
 const Projects = () => {
@@ -36,7 +36,7 @@ const Projects = () => {
       </AdminForm>
       <EditProjects>
         <Title label={'Elimina o edita un proyecto'} />
-        <ProjectsList />
+        <ProjectsListAdmin />
       </EditProjects>
     </AdminProjectsStyle>
   );

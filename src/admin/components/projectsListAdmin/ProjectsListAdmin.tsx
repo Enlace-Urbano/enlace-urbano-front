@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Box, ProjectsCard, TextContainer } from './ProjectsListStyle';
-import { baseProjectsUrl, getProjectRequest } from '../../../apiServices/projectsServices';
+import { Box, ProjectsCard, TextContainer } from './ProjectsListAdminStyle';
+import { baseProjectsUrl, deleteProjectRequest, getProjectRequest } from '../../../apiServices/projectsServices';
 
 interface Project {
   title: string;
@@ -22,6 +22,15 @@ const ProjectsList = () => {
       })
   }, [])
 
+
+  const handleDeleteProjects = async (title: string) => {
+    try {
+      await deleteProjectRequest(title);
+      setProjects (projects.filter((project) => project.title !== title));
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       {projects.map((project, index) => (
@@ -35,6 +44,8 @@ const ProjectsList = () => {
             <TextContainer>
               <h1>{project.title}</h1>
               <p>{project.description}</p>
+              <button onClick={() => handleDeleteProjects(project.title)} > Eliminar</button>
+
             </TextContainer>
           </Box>
         </ProjectsCard>

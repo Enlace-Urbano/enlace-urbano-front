@@ -5,19 +5,39 @@ interface ProjectsCardProps {
 }
 
 export const ProjectsCard = styled.li<ProjectsCardProps>`
-width: 100%;
-height:50vw;
+width: 80%;
+margin: 3rem auto;
+height:40vw;
 background-color: ${({ isReversed }) => isReversed ? 'var(--color-blue)' : 'var(--color-green)'};
 color: white;
 display: flex;
-align-items: center;
 flex-direction: ${({ isReversed }) => isReversed ? 'row-reverse' : 'row'};
 
 img {
   width: 100%;
-  // height: 100vh;
-  min-height: 50vw;
+  min-height: 40vw;
   object-fit: cover;
+}
+
+
+button{
+margin: 3rem auto;
+width: 177px;
+height: 50px;
+background-color: var(--color-black);
+color: var(--color-white);
+border: none;
+border-radius: 5px;
+font-size: 18px;
+
+
+
+&:hover {
+background:  #5d9289;
+font-weight: bold;
+border-radius: 5px;
+}
+
 }
 
 @media screen and (max-width: 768px) {
@@ -30,7 +50,7 @@ img {
 
 export const Box = styled.div`
   width: 50%;
-  height: 100%;
+  height: 100;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -42,6 +62,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 padding: 15%;
+height: 100%;
 
 h1 {
   font-family: "Calistoga";

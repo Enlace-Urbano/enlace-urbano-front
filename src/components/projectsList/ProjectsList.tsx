@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Box, ProjectsCard, TextContainer } from './ProjectsListStyle';
-import { baseProjectsUrl, getProjectRequest } from '../../../apiServices/projectsServices';
-import React from 'react';
+import { baseProjectsUrl, getProjectRequest } from '../../apiServices/projectsServices';
 
 interface Project {
   title: string;

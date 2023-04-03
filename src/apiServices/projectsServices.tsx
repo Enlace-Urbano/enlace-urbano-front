@@ -15,3 +15,17 @@ export const postProjectRequest = async (formData: FormData) => {
     })
 }
 
+
+
+export const deleteProjectRequest = async (title: string) => {
+    try {
+      const response = await axios.delete(`${baseProjectsUrl}${title}`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
+        }
+      });
+      return response;
+    } catch (error) {
+      throw new Error();
+    }
+  };

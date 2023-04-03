@@ -1,4 +1,4 @@
-import { ProjectsList } from "../../admin/components/index"
+import ProjectsList from "../../components/projectsList/ProjectsList"
 import { ProjectCardStyle, ProjectHero, ProjectMapStyle } from "./ProjectsStyle"
 
 
