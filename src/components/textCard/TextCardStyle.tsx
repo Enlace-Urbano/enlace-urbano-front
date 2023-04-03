@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div<{ marginT: number, marginB: number, bgcolor: string }>`
     width: 100%;
-    min-height: 60vh;
+    min-height: 70vh;
     margin-top: ${props => props.marginT}rem;
     margin-bottom: ${props => props.marginB}rem;
     display: flex;

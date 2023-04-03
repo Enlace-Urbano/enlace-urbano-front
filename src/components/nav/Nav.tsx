@@ -72,7 +72,7 @@ const Nav = () => {
 
                     <div className='buttons'>
                         <Link to="/contactanos" >
-                            <NavButton label={'Contáctanos'} color={'#00B899'} />
+                            <NavButton label={'Contáctanos'} color={'var(--color-green)'} />
                         </Link>
                     </div>
                     <span>

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { postProjectRequest } from '../../../apiServices/proyectsServices';
+import { postProjectRequest } from '../../../apiServices/projectsServices';
 import { AdminForm, AdminProjectsStyle, EditProjects, InputProject } from './AdminProjectsStyle';
 import { Button, Input, Title } from '../../../elements/index';
 import { ProjectsList } from '../../components/index';
@@ -16,11 +16,11 @@ const Projects = () => {
     formData.append('title', title);
     formData.append('description', description);
     if (image !== undefined)
-    formData.append('image', image);
+      formData.append('image', image);
     try {
       const res = postProjectRequest(formData)
-      }
-     catch (error) {
+    }
+    catch (error) {
       console.log(error);
     }
   };
@@ -29,8 +29,8 @@ const Projects = () => {
     <AdminProjectsStyle>
       <Title label={'Crea un nuevo Proyecto'} />
       <AdminForm onSubmit={handleSubmit}>
-        <InputProject placeholder={'Título del proyecto'} type="text" value={title} onChange={(e) => setName(e.target.value)} required/>
-        <TextArea placeholder={'Descripción'} type="text" value={description} onChange={(e) => setRole(e.target.value)} name={''} required/>
+        <InputProject placeholder={'Título del proyecto'} type="text" value={title} onChange={(e) => setName(e.target.value)} required />
+        <TextArea placeholder={'Descripción'} type="text" value={description} onChange={(e) => setRole(e.target.value)} name={''} required />
         <input type="file" accept=".png" onChange={(e) => setImage((e.target.files as FileList)[0])} />
         <Button onClick={refresh} type="submit" label='Crear ' />
       </AdminForm>

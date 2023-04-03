@@ -1,16 +1,14 @@
-import { NavButtonStyle} from './NavButtonStyle'
+import { NavButtonStyle } from './NavButtonStyle'
 
-interface ButtonProps  {
+interface ButtonProps {
     label: string;
     color: string
-  }
+}
 
- const NavButton: React.FC<ButtonProps> = ({ label, color = '#007bff' }) => ( 
-   
-        <>
-        <NavButtonStyle color={color} > {label} </NavButtonStyle>
-        </>
-    )
-    
+const NavButton: React.FC<ButtonProps> = ({ label, color }) => (
+    <NavButtonStyle color={color} >
+        {label}
+    </NavButtonStyle>
+)
 
 export default NavButton
