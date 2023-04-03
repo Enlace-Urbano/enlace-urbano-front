@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ImPhone } from "react-icons/im";
-import logoBlack from '../../assets/logoBlack.svg';
+import logoBlack from '../../assets/svg/logoBlack.svg';
 import { FooterBottom, FooterStyle, Social, SocialContainer } from "./FooterStyle";
-import { IoLogoLinkedin, IoLogoFacebook, IoMail,IoLogoVimeo } from "react-icons/io5";
+import { IoLogoLinkedin, IoLogoFacebook, IoMail, IoLogoVimeo } from "react-icons/io5";
 import { AiFillInstagram } from 'react-icons/ai'
 
 type Props = {};
@@ -25,13 +25,13 @@ const Footer = (props: Props) => {
           <Link to="/contactanos">Contáctanos</Link>
           <Link to="/canaletico">Canal ético</Link>
           <Social>
-          <p>Sígenos en redes sociales</p>
-          <SocialContainer>
-          <a href="https://www.linkedin.com/company/enlace-urbano/"><IoLogoLinkedin /></a>
-                <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram /></a>
-                <a href="https://www.facebook.com/people/enlaceurbano/100086536375505/"><IoLogoFacebook /></a>
-                <a href="https://vimeo.com/enlaceurbano"><IoLogoVimeo /></a>
-          </SocialContainer>
+            <p>Sígenos en redes sociales</p>
+            <SocialContainer>
+              <a href="https://www.linkedin.com/company/enlace-urbano/"><IoLogoLinkedin /></a>
+              <a href="https://www.instagram.com/enlace.urbano/?hl=es"><AiFillInstagram /></a>
+              <a href="https://www.facebook.com/people/enlaceurbano/100086536375505/"><IoLogoFacebook /></a>
+              <a href="https://vimeo.com/enlaceurbano"><IoLogoVimeo /></a>
+            </SocialContainer>
           </Social>
         </span>
         <span>

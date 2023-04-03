@@ -1,10 +1,10 @@
 import { Button, Input, Title } from '../../elements/index'
 import { LoginForm, LoginStyle } from '../login/LoginStyle'
-import login from '../../assets/login.png'
-import logoBlack from '../../assets/logoBlack.svg'
+import login from '../../assets/images/login.png'
+import logoBlack from '../../assets/svg/logoBlack.svg'
 import { FormEventHandler, useState } from 'react'
 import { useNavigate } from 'react-router'
-import { authService } from '../../features/auth/services/auth.service'
+import { authService } from '../../apiServices/authService'
 
 interface LoginFormValues {
   username: string;
@@ -12,7 +12,6 @@ interface LoginFormValues {
 }
 
 const Login = () => {
-
   const navigate = useNavigate()
   const [loggedInUser, setLoggedInUser] = useState<string | null>(null)
 
@@ -36,7 +35,6 @@ const Login = () => {
       console.log(error)
     }
   }
-
 
   return (
     <>

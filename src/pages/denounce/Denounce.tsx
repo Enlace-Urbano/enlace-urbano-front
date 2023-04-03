@@ -1,4 +1,4 @@
-import { Button, Title } from "../../elements/Index"
+import { Button, Title } from "../../elements/index"
 import Textarea from "../../elements/textarea/Textarea"
 import { DenounceForm, DenounceStyle, Info } from "./DenounceStyle"
 import React, { useRef } from 'react';
@@ -10,18 +10,18 @@ const Denounce = () => {
     const form = useRef<HTMLFormElement>(null);
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      if (form.current) {
-      emailjs.sendForm('service_xhgd2at', 'template_9jr74ev', form.current, 'wz3DnBPyrWrKO0bTF')
-        .then((result) => {
-            alert('Su mensaje ah sido enviado');
-            console.log(result.text);
-        }, (error) => {
-            alert('Lo sentimos, ha habido un error. Vuela a intentarlo');
-            console.log(error.text);
-        });
-    };
-}
+        e.preventDefault();
+        if (form.current) {
+            emailjs.sendForm('service_xhgd2at', 'template_9jr74ev', form.current, 'wz3DnBPyrWrKO0bTF')
+                .then((result) => {
+                    alert('Su mensaje ah sido enviado');
+                    console.log(result.text);
+                }, (error) => {
+                    alert('Lo sentimos, ha habido un error. Vuela a intentarlo');
+                    console.log(error.text);
+                });
+        };
+    }
     return (
         <>
             <DenounceStyle>
@@ -33,13 +33,13 @@ const Denounce = () => {
 
 
                 </Info>
-                <DenounceForm  ref={form} onSubmit={sendEmail}>
+                <DenounceForm ref={form} onSubmit={sendEmail}>
                     <Title label={"Denuncia"}></Title>
                <TextArea name="message" placeholder={"Escribe aquí tu denuncia anónima y confidencial."}/>
                     <Button type="submit" label={"Enviar"}></Button>
                 </DenounceForm>
             </DenounceStyle>
-        
+
         </>
     )
 

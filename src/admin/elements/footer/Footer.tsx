@@ -1,4 +1,4 @@
-import logoBlack from '../../../assets/logoBlack.svg'
+import logoBlack from '../../../assets/svg/logoBlack.svg'
 import { FooterAdminStyle } from './FooterStyle'
 
 type Props = {}
@@ -6,7 +6,7 @@ type Props = {}
 const AdminFooter = (props: Props) => {
   return (
     <FooterAdminStyle>
-        <img src={logoBlack} alt="enlace urbano" />
+      <img src={logoBlack} alt="enlace urbano" />
     </FooterAdminStyle>
 
   )

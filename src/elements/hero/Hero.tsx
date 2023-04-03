@@ -1,5 +1,5 @@
 import { HeroStyle } from './HeroStyle'
-import videoHero from '../../assets/videoHero.mp4'
+import videoHero from '../../assets/video/videoHero.mp4'
 
 const Hero = () => {
 

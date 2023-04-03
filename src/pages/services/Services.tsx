@@ -1,10 +1,10 @@
 import { Fragment } from "react"
 import { MainCard } from "../../components"
 import TextCard from "../../components/textCard/TextCard"
-import group6 from "../../assets/group6.jpg"
-import group1 from "../../assets/group1.jpg"
-import iquique from "../../assets/iquique.jpg"
-import hospicio from "../../assets/altohospicio1.jpg"
+import group6 from "../../assets/images/group6.jpg"
+import group1 from "../../assets/images/group1.jpg"
+import iquique from "../../assets/images/iquique.jpg"
+import hospicio from "../../assets/images/altohospicio1.jpg"
 
 const Services = () => {
     return (
