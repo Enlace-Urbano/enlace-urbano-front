@@ -4,6 +4,7 @@ import Login from "./pages/login/Login";
 import { Workers, LayoutAdmin, AdminProjects, Statistics } from './admin/pages/Index'
 import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/index'
 import PrivateRoute from "./middleware/authMiddleware";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/servicios" element={<Services />} />
         <Route path="/contactanos" element={<Contact />} />
         <Route path="/canaletico" element={<Denounce />} />
+        <Route path='*' element={<NotFound />} />
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/admin/*" element={<PrivateRoute component={LayoutAdmin} />}>
