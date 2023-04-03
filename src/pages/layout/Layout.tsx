@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { AsideNav, Nav, Footer } from '../../components/Index';
+import { AsideNav, Nav, Footer } from '../../components/index';
 
 
 const Layout = () => {

@@ -1,19 +1,17 @@
-import { ButtonStyle} from './ButtonStyle'
+import { ButtonStyle } from './ButtonStyle'
 
-interface ButtonProps  {
+interface ButtonProps {
     label: string;
     type?: string;
-    onClick?: (event: MouseEvent) => void;
-  }
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
 
- const refresh = () => window.location.reload()
+const refresh = () => window.location.reload()
 
- const Button: React.FC<ButtonProps> = ({ label, type, onClick }) => ( 
-   
-        <>
+const Button: React.FC<ButtonProps> = ({ label, type, onClick }) => (
+    <>
         <ButtonStyle> {label} </ButtonStyle>
-        </>
-    )
-    
+    </>
+)
 
 export default Button

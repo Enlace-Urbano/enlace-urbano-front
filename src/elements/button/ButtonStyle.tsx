@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ButtonStyle = styled.button`
+width: 177px;
+height: 50px;
 background-color: var(--color-black);
 color: var(--color-white);
-height: 50px;
-width: 177px;
 border: none;
 border-radius: 5px;
 font-size: 18px;
@@ -18,13 +18,12 @@ font-size: 18px;
 background: var(--color-green);
 font-weight: bold;
 border-radius: 5px;
-
 }
 
 @media screen and (max-width: 768px) {
-height: 60px;
-width: 50%;
-font-size: 16px;
+    // height: 60px;
+    // width: 50%;
+    // font-size: 16px;
 }
 `
 
