@@ -5,38 +5,61 @@ position: absolute;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
 gap: 2rem;
 left: 20vw;
 width: 80vw;
+height: 100;
 top: 5vh;
 color: var(--color-black);
-`
 
-export const Container = styled.div`
-width: 80vw;
+input {
+width: 6rem;
+height: 60px;
+border: none;
+border-bottom: 2px solid var(--color-highlights);
+outline: transparent;
+font-weight: 400;
+font-size: 16px;
+padding-left: 1.5em;
+background-color: transparent;
+color: gray;
 
-h3{
-font-size: 18px;
+&:invalid{
+    transition: 0.2s;
+    border-bottom: 2px solid red}
+
+
+&:focus{
+    transition: 0.2s;
+    border-bottom: 2px solid black;
+}
+}
+
+button{
 margin-left: 6rem;
-font-weight: bold; 
+width: 177px;
+height: 50px;
+background-color: var(--color-black);
+color: var(--color-white);
+border: none;
+border-radius: 5px;
+font-size: 18px;
+
+&:focus{
+    transition: 0.2s;
+    background-color:  #579288;
 }
 
-`
-export const StatisticsContainer = styled.div`
-p {
-    margin-bottom: 1rem;
+&:hover {
+background: var(--color-green);
+font-weight: bold;
+border-radius: 5px;
+}
+
 }
 `
 
-export const CardSection = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    padding: 3rem;
-
-
-
+export const StatisticsContainer = styled.div`   
+margin: 8rem;
 `
+

@@ -20,11 +20,7 @@ font-weight: bold;
 border-radius: 5px;
 }
 
-@media screen and (max-width: 768px) {
-    // height: 60px;
-    // width: 50%;
-    // font-size: 16px;
-}
+
 `
 
 
