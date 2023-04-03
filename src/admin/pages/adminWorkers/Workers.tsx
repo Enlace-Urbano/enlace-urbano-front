@@ -40,7 +40,7 @@ const Workers = () => {
       </WorkersForm>
       <WorkersListContainer>
         <Title label={'Elimina o edita un integrante'} />
-        <WorkersList />
+      <WorkersList />
       </WorkersListContainer>
     </WorkersStyle>
   );

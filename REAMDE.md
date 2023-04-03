@@ -14,7 +14,6 @@ This Web Application serves as a point of connection between the aid plans offer
 
 ## Workflow Methodology
 - Kanban
-- TDD
 - Agile with SCRUM
 - Pair and solo programming
 ***
