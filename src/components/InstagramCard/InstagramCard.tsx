@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import { InstagramCardStyle } from "./InstagramCardStyle";
 import Button from "../../elements/button/Button";
+import { getInstagramFeed } from "../../apiServices/instagramServices";
 
 type Props = {};
 
@@ -15,18 +15,14 @@ const InstagramCard = (props: Props) => {
   useEffect(() => {
     const fetchInstagramFeed = async () => {
       try {
-        const response = await axios.get(
-          `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url&access_token=${
-            import.meta.env.VITE_IG_API_TOKEN
-          }&limit=6`
-        );
-        console.log(response.data.data);
-        setFeed(response.data.data);
+        const instagramFeed = await getInstagramFeed();
+        console.log(instagramFeed);
+        setFeed(instagramFeed);
       } catch (error) {
         console.log(error);
       }
     };
-
+  
     fetchInstagramFeed();
   }, []);
 
