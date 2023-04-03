@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import chileMap from "../../assets/chileMap.png"
+import chileMap from "../../assets/images/chileMap.png"
 
 export const ProjectHero = styled.div`
 display: flex;
