@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 export const DropdownStyle = styled.div`
+width: 100%;
+height:calc(100vh - 70px);
 display: flex;
 padding: 10rem 0 4rem 0;
 align-items: center;
 justify-content: space-between;
 flex-direction: column;
-width: 100%;
-height:calc(100vh - 80px);
 background-color: #fdfdfd;
 
 li {

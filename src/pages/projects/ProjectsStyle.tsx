@@ -4,6 +4,7 @@ import chileMap from "../../assets/chileMap.png"
 export const ProjectHero = styled.div`
 display: flex;
 height: 100vh;
+margin: 0 auto;
 background-color: var(--color-blue);
 
 h1{
@@ -18,6 +19,9 @@ p{
 }
 
 @media screen and (max-width: 768px) {
+    flex-flow: column nowrap;
+    height: min-content;
+
     h1{
         font-size: 24px;
         margin-bottom: 0.5rem;
@@ -38,6 +42,11 @@ background-image: url(${chileMap});
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;
+
+@media screen and (max-width: 768px) {
+    width: 100%;
+    height: 100vh;
+}
 `
 
 export const ProjectCardStyle = styled.div` 
@@ -49,11 +58,20 @@ align-items: center;
 justify-content: center;
 
 div {
+    width: 40vw;
     margin: 0 auto;
     background-color: var(--color-blue);
-    width: 40vw;
     height: fit-content;
     padding: 10%;
     color: var(--color-white);
+}
+
+@media screen and (max-width: 768px) {
+    width: 100%;
+    height: 60vh;
+
+    div{
+        width: 80%;
+    }
 }
 `
