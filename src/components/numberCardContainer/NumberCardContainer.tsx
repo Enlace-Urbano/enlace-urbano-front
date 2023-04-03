@@ -13,7 +13,6 @@ const NumberCardsContainer = () => {
     getstatisticsRequest()
       .then((response) => {
         setStatistic(response.data);
-        console.log(response.data);
       })
       .catch((error) => {
         console.error(error);

@@ -16,7 +16,6 @@ const InstagramCard = (props: Props) => {
     const fetchInstagramFeed = async () => {
       try {
         const instagramFeed = await getInstagramFeed();
-        console.log(instagramFeed);
         setFeed(instagramFeed);
       } catch (error) {
         console.log(error);

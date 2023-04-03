@@ -1,4 +1,4 @@
-import { NumberCard, Title } from "../../../elements/index";
+import { Title } from "../../../elements/index";
 import { StatisticsStyle } from "./AdminStatisticsStyle";
 import { useState, useEffect } from "react";
 import { getstatisticsRequest, updateStatisticRequest } from "../../../apiServices/statisticsServices";
@@ -6,6 +6,7 @@ import { getstatisticsRequest, updateStatisticRequest } from "../../../apiServic
 interface Statistic {
   register: string;
   value: number;
+  data:Object;
 }
 
 const Statistics = () => {
@@ -15,7 +16,6 @@ const Statistics = () => {
     getstatisticsRequest()
             .then((response) => {
               setStatistics(response.data);
-              console.log(response.data);
             })
             .catch((error) => {
               console.error(error);
@@ -30,8 +30,7 @@ const Statistics = () => {
 
         const handleUpdate = (index: number) => {
             updateStatisticRequest(statistics[index])
-              .then((response) => {
-                console.log(response.data);
+              .then(() => {
               })
               .catch((error) => {
                 console.error(error);
@@ -79,72 +78,3 @@ const Statistics = () => {
 };
 
 export default Statistics;
-
-
-
-
-
-
-
-// import { NumberCardContainer } from "../../../components/index";
-// import { NumberCard, Title } from "../../../elements/Index";
-// import { CardSection, Container, StatisticsContainer, StatisticsStyle } from "./AdminStatisticsStyle";
-// import { useState, useEffect } from "react";
-// import { getstatisticsRequest } from "../../../apiServices/statisticsServices";
-
-// interface Statistic {
-//   register: string;
-//   value: number;
-// }
-// const Statistics = () => {
-
-//     const [statistic, setStatistic] = useState<Statistic[]>([]);
-//     useEffect(() => {
-//       getstatisticsRequest()
-//         .then((response) => {
-//           setStatistic(response.data);
-//           console.log(response.data);
-//         })
-//         .catch((error) => {
-//           console.error(error);
-//         });
-//     }, []);
-
-//     return (
-//         <>
-//             <StatisticsStyle>
-//                 <Title label={'Estadísticas'} />
-//                     <h3>Edita o elimina las cifras </h3>
-//         <div className="card1">
-//           <NumberCard
-//             label={'Proyectos'}
-//             number={statistic.length > 0 ? statistic[0].value : 0}
-//             color={"#025393"}
-//           />
-//         </div>
-//         <div  className="card2">
-//           <NumberCard 
-//             label={'Comunidades'}
-//             number={statistic.length > 0 ? statistic[1].value : 0}
-//            color={"#80DBCC"} />
-//         </div>
-//         <div className="card3">
-//           <NumberCard 
-//              label={'Regiones'}
-//              number={statistic.length > 0 ? statistic[2].value : 0}
-//             color={"#00B899"}
-//           />
-//         </div>
-   
- 
-//             </StatisticsStyle>
-//         </>
-//     );
-// }
-
-// export default Statistics;
-
-
-
-
-
