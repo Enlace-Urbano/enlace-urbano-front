@@ -10,7 +10,7 @@ interface ButtonProps  {
  const Button: React.FC<ButtonProps> = ({ label, type }) => ( 
    
         <>
-        <ButtonStyle onClick={refresh}> {label} </ButtonStyle>
+        <ButtonStyle> {label} </ButtonStyle>
         </>
     )
     
