@@ -17,12 +17,5 @@ export const authService = {
     register(user: User) {
         return axios.post(this.baseUrl.concat('users/register'), user)
     },
-    // validateToken(token: Token) {
-    //     return axios.post(this.baseUrl.concat('validate-token'), {
-    //         headers: {
-    //             'Content-Type': 'multipart/form-data',
-    //             'Authorization': `Bearer ${localStorage.getItem('token')}`
-    //         }
-    //     })
-    // }
+
 }

@@ -6,5 +6,5 @@ export { default as MainCard } from './mainCard/MainCard';
 export { default as AsideNav } from './asideNav/AsideNav';
 export { default as Footer } from './footer/Footer';
 export { default as AdminMenu } from '../admin/components/adminMenu/AdminMenu';
-
+export { default as ProjectList } from './projectsList/ProjectsList';
 
