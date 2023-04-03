@@ -6,7 +6,7 @@ import { getstatisticsRequest, updateStatisticRequest } from "../../../apiServic
 interface Statistic {
   register: string;
   value: number;
-  data:Object;
+  data: Object;
 }
 
 const Statistics = () => {
@@ -14,28 +14,28 @@ const Statistics = () => {
 
   useEffect(() => {
     getstatisticsRequest()
-            .then((response) => {
-              setStatistics(response.data);
-            })
-            .catch((error) => {
-              console.error(error);
-            });
-        }, []);
+      .then((response) => {
+        setStatistics(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
-        const handleEdit = (index: number, value: number) => {
-            const newStatistics = [...statistics];
-            newStatistics[index].value = isNaN(value) ? 0 : value;
-            setStatistics(newStatistics);
-          };
+  const handleEdit = (index: number, value: number) => {
+    const newStatistics = [...statistics];
+    newStatistics[index].value = isNaN(value) ? 0 : value
+    setStatistics(newStatistics)
+  }
 
-        const handleUpdate = (index: number) => {
-            updateStatisticRequest(statistics[index])
-              .then(() => {
-              })
-              .catch((error) => {
-                console.error(error);
-              });
-          };
+  const handleUpdate = (index: number) => {
+    updateStatisticRequest(statistics[index])
+      .then(() => {
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  }
 
   return (
     <>

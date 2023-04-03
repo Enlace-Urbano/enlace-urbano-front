@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BorderButtonStyle } from './BorderButtonStyle'
 
 interface ButtonProps {
@@ -9,9 +10,11 @@ interface ButtonProps {
 const BorderButton: React.FC<ButtonProps> = ({ label, color, bgcolor }) => {
     return (
         <>
+
             <BorderButtonStyle color={color} bgcolor={bgcolor}>
                 {label}
             </BorderButtonStyle>
+
         </>
     )
 }

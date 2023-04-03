@@ -1,7 +1,8 @@
 import { HomeCardContainer, HomeCardStyle } from './HomeCardStyle'
-import { BorderButton } from '../Index'
+import { BorderButton } from '../index'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
     color: string
@@ -10,9 +11,10 @@ interface CardProps {
     plabel: string
     img: string
     align: string
+    link: string
 }
 
-const HomeCard: React.FC<CardProps> = ({ h1label, plabel, color, bgcolor, img, align }) => {
+const HomeCard: React.FC<CardProps> = ({ h1label, plabel, color, bgcolor, img, align, link }) => {
 
     const handleMouse = useRef<HTMLDivElement>(null)
     useEffect(() => {
@@ -51,7 +53,9 @@ const HomeCard: React.FC<CardProps> = ({ h1label, plabel, color, bgcolor, img, a
                 <HomeCardStyle ref={handleMouse} color={color} bgcolor={bgcolor} >
                     <h1>{h1label}</h1>
                     <p>{plabel}</p>
-                    <BorderButton label={'Ver más'} color={'var(--color-white)'} bgcolor={'transparent'} />
+                    <Link to={link}>
+                        <BorderButton label={'Ver más'} color={'var(--color-white)'} bgcolor={'transparent'} />
+                    </Link>
                     <div className="bg-container"></div>
                 </HomeCardStyle>
                 <img src={img} alt="foto" />

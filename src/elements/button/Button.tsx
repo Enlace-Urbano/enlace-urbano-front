@@ -6,9 +6,7 @@ interface ButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-
-
-const Button: React.FC<ButtonProps> = ({ label, type, onClick }) => (
+const Button: React.FC<ButtonProps> = ({ label, type }) => (
     <>
         <ButtonStyle> {label} </ButtonStyle>
     </>
