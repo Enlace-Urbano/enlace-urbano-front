@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router";
 import Login from "./pages/login/Login";
-import { Workers, AdminHome, LayoutAdmin, AdminProjects, Statistics } from './admin/pages/Index'
+import { Workers, LayoutAdmin, AdminProjects, Statistics } from './admin/pages/Index'
 import { Home, About, Projects, Everyday, Services, Contact, Layout, Denounce } from './pages/index'
 import PrivateRoute from "./middleware/authMiddleware";
 
