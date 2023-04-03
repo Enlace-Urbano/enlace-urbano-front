@@ -24,7 +24,7 @@ const Projects = () => {
       console.log(error);
     }
   };
-
+  const refresh = () => window.location.reload()
   return (
     <AdminProjectsStyle>
       <Title label={'Crea un nuevo Proyecto'} />
@@ -32,7 +32,7 @@ const Projects = () => {
         <InputProject placeholder={'Título del proyecto'} type="text" value={title} onChange={(e) => setName(e.target.value)} required/>
         <TextArea placeholder={'Descripción'} type="text" value={description} onChange={(e) => setRole(e.target.value)} name={''} required/>
         <input type="file" accept=".png" onChange={(e) => setImage((e.target.files as FileList)[0])} />
-        <Button type="submit" label='Crear ' />
+        <Button onClick={refresh} type="submit" label='Crear ' />
       </AdminForm>
       <EditProjects>
         <Title label={'Elimina o edita un proyecto'} />

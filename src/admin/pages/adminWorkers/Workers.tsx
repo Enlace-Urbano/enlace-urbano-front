@@ -25,8 +25,8 @@ const Workers = () => {
       console.log(error);
     }
   };
-
-  
+ 
+  const refresh = () => window.location.reload()
 
   return (
     <WorkersStyle>
@@ -36,7 +36,7 @@ const Workers = () => {
         <InputWorker placeholder={'Rol dentro de la ONG'} type="text" value={role} onChange={(e) => setRole(e.target.value)} required/>
         <InputWorker placeholder={'Profesión'} type="text" value={profession} onChange={(e) => setProfession(e.target.value)} required/>
         <input type="file" accept=".png" onChange={(e) => setImage((e.target.files as FileList)[0])} required/>
-        <Button type="submit" label='Crear '/>
+        <Button onClick={refresh} type="submit" label='Crear' />
       </WorkersForm>
       <WorkersListContainer>
         <Title label={'Elimina o edita un integrante'} />
