@@ -1,10 +1,10 @@
 import { HomeStyle } from './HomeStyle'
-import { Hero } from '../../elements/Index'
+import { Hero } from '../../elements/index'
 import HomeCard from '../../elements/homeCard/HomeCard'
-import group2 from '../../assets/group2.jpg'
-import group3 from '../../assets/group3.jpg'
-import group4 from '../../assets/group4.jpg'
-import iquique from '../../assets/iquique.jpg'
+import group2 from '../../assets/images/group2.jpg'
+import group3 from '../../assets/images/group3.jpg'
+import group4 from '../../assets/images/group4.jpg'
+import iquique from '../../assets/images/iquique.jpg'
 
 
 const Home = () => {

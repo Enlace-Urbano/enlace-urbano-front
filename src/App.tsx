@@ -19,7 +19,7 @@ function App() {
       </Route>
       <Route path="/login" element={<Login />} />
       <Route path="/admin/*" element={<PrivateRoute component={LayoutAdmin} />}>
-        <Route path="menu" element={<AdminHome />} />
+        <Route path="" element={<AdminHome />} />
         <Route path="workers" element={<Workers />} />
         <Route path="stadistics" element={<Stadistics />} />
         <Route path="projects" element={<AdminProjects />} />
