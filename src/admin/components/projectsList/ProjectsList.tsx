@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { ProjectsCard, ProjectsListStyle, TextContainer  } from './ProjectsListStyle';
-import { baseProjectsUrl, getProjectRequest } from '../../../apiServices/proyectsServices';
+import { Box, ProjectsCard, TextContainer } from './ProjectsListStyle';
+import { getProjectRequest } from '../../../apiServices/proyectsServices';
 
 interface Project {
   title: string;
@@ -16,6 +16,7 @@ const ProjectsList = () => {
     getProjectRequest()
       .then(response => {
         setProjects(response.data);
+        console.log(response.data);
       })
       .catch(error => {
         console.error(error);
@@ -26,11 +27,15 @@ const ProjectsList = () => {
 
   return (
     <>
-    <ProjectsListStyle>
-        {projects.map(project => (
-          <ProjectsCard key={project.title}>
-            <img src={`${baseProjectsUrl}${project.title}/image`} alt={project.title} />
-            <TextContainer>
+      {projects.map((project, index) => (
+        <ProjectsCard
+          key={project.title}
+          isReversed={index % 2 === 1 ? !isReversed : isReversed}  >
+          <Box> 
+            <img src={`http://localhost:3000/api/v1/projects/${project.title}/image`} alt={project.title}/>
+          </Box>
+          <Box> 
+          <TextContainer>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
           </TextContainer>          
