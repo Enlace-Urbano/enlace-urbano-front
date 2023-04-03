@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { InstagramCardStyle } from "./InstagramCardStyle";
 import Button from "../../elements/button/Button";
 import { getInstagramFeed } from "../../apiServices/instagramServices";
+import { InstagramCardStyle } from "./InstagramCardStyle";
 
-type Props = {};
+type Props = {}
 
 export type InstagramPost = {
-  map(arg0: (post: any) => JSX.Element): React.ReactNode;
+  map(arg0: (post: any) => JSX.Element): React.ReactNode
 };
 
 const InstagramCard = (props: Props) => {
-  const [feed, setFeed] = useState<InstagramPost>([]);
+  const [feed, setFeed] = useState<InstagramPost>([])
 
   useEffect(() => {
     const fetchInstagramFeed = async () => {
@@ -18,12 +18,12 @@ const InstagramCard = (props: Props) => {
         const instagramFeed = await getInstagramFeed();
         setFeed(instagramFeed);
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
-    };
-  
-    fetchInstagramFeed();
-  }, []);
+    }
+
+    fetchInstagramFeed()
+  }, [])
 
   return (
     <>
@@ -32,11 +32,14 @@ const InstagramCard = (props: Props) => {
           <li key={post.id}>
             <img src={post.media_url} alt={post.caption} />
             <p>{post.caption}</p>
-            <Button label={"Ver más"} />
+            <a href="https://www.instagram.com/enlace.urbano/?hl=es" target="_blank" rel="noopener noreferrer">
+              <Button label="Ver más" />
+            </a>
           </li>
         </InstagramCardStyle>
       ))}
     </>
-  );
-};
-export default InstagramCard;
+  )
+}
+
+export default InstagramCard

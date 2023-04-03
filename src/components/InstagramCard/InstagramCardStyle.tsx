@@ -1,35 +1,34 @@
 import styled from "styled-components";
 
 export const InstagramCardStyle = styled.div`
-width: 33.33%;
-
-li {
-    margin: 0 auto;
-    color: #424242;
+li{
     width: 340px;
     height: 500px;
-    gap: 1rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
+    color: #424242;
     border-radius: 5px;
 } 
 
-li:hover {
+li:hover{
     transition: 0.2s;
     background-color:var(--color-lightblue);
 
 }
 
-img {
+img{
     width: 300px;
     border-radius: 5px;
     margin-top: 0;
 
 }
 
-p {
+p{
+    width: 300px;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -39,15 +38,11 @@ p {
     font-size: 18px;
     margin-left: 6px;
     margin-bottom: 10px;
-    width: 300px;
 }
 
-Button {
-
+a{
+    cursor: pointer;
     align-self: flex-end;
     margin-right: 20px;
-    
 }
-
-
 `
