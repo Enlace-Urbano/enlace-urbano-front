@@ -1,3 +1,4 @@
+import { Form } from "../../components/index"
 import { ContactForm, ContactStyle, Info } from "./ContactStyle"
 import { IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
