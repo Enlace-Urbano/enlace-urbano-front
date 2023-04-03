@@ -29,7 +29,7 @@ const Login = () => {
 
       setLoggedInUser(localStorage.getItem('token'))
 
-      navigate('/admin', { replace: true })
+      navigate('/admin/statistics', { replace: true })
 
     } catch (error) {
       console.log(error)
