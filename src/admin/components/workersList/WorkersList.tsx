@@ -16,7 +16,6 @@ const WorkersList = () => {
     getWorkersRequest()
       .then(response => {
         setWorkers(response.data);
-        console.log(response.data);
       })
       .catch(error => {
         console.error(error);
