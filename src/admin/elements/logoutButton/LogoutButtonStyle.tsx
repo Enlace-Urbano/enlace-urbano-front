@@ -17,6 +17,6 @@ cursor: pointer;
 
 img{
     width: 1rem;
-    heigth: 1rem;
+    height: 1rem;
 }
 `
