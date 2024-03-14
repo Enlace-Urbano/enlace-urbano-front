@@ -36,7 +36,6 @@ This Web Application serves as a point of connection between the aid plans offer
 <img src="src/assets/readme-imgs/5.png">
 <img src="src/assets/readme-imgs/6.png">
 <img src="src/assets/readme-imgs/7.png">
-<img src="src/assets/readme-imgs/8.png">
 <img src="src/assets/readme-imgs/9.png">
 <img src="src/assets/readme-imgs/10.png">
 
